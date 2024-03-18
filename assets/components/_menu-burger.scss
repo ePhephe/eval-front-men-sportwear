@@ -59,6 +59,15 @@
         top: 80px;
         right: 0px;
         z-index: 11;
+        transition: transform 400ms linear;
+        transform: translateX(100%);
+    }
+}
+
+/* Transformation pour l'affichage du header en smartphone */
+.navigation-burger-affiche {
+    @media all and (max-width : $widthSmartphone) {
+        transform: translateX(0%);
     }
 }
 

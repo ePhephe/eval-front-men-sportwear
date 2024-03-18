@@ -52,6 +52,7 @@ header {
     padding-top: 7px;
     padding-bottom: 7px;
     height: 80px;
+    width: 100%;
     position: fixed;
     top:0;
     left: 0;
@@ -108,19 +109,19 @@ header nav li:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
     height: 80vh;
-    margin-bottom: 200px;
 }
 .outdoor-accroche {
     transform: translateY(100%);
 }
-.gamme-outdoor article {
-    position: absolute;
-    bottom: -80px;
+.article-outdoor {
+    
+    margin-top: -220px;
+}
+.article-outdoor article {
     border: 1px solid var(--firstColor);
 }
-.gamme-outdoor article strong {
+.article-outdoor article strong {
     text-transform: uppercase;
     font-size: 1.375rem;
 }
@@ -129,11 +130,11 @@ header nav li:hover {
     font-weight: 700;
     color: var(--secondColor);
 }
-.gamme-outdoor article ul {
+.article-outdoor  article ul {
     list-style: disc;
     list-style-position: inside;
 }
-.gamme-outdoor article a {
+.article-outdoor article a {
     color: var(--secondColor);
     font-weight: 700;
     text-align: center;
@@ -234,4 +235,46 @@ header nav li:hover {
 }
 .nom-avis {
     font-family: var(--fontTitre);
+}
+
+@media all and (max-width : $widthSmartphone) {
+    .hero {
+        display: none;
+    }
+
+    /* Section pour la gamme outdoor */
+    .gamme-outdoor {
+        background-image: url("../images/images-site/accueil-bg-outdoor.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: auto;
+    }
+    .outdoor-accroche {
+        transform: none;
+    }
+    .article-outdoor {
+        margin-top: 0;
+    }
+    .article-outdoor article {
+        border: 1px solid var(--firstColor);
+    }
+    .article-outdoor article strong {
+        text-transform: uppercase;
+        font-size: 1.375rem;
+    }
+    .prix {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--secondColor);
+    }
+    .article-outdoor  article ul {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    .article-outdoor article a {
+        color: var(--secondColor);
+        font-weight: 700;
+        text-align: center;
+    }
 }

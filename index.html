@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
-    <header class="bg-black large-12-12">
+    <header class="bg-black">
         <div class="container-full flex justify-between">
             <!-- Logo de la marque avec un lien sur l'accueil -->
             <div>
@@ -47,9 +47,9 @@
                 <span class="burger-middle"></span>
                 <span class="burger-bottom"></span>
             </div>
-            <div class="navigation-burger">
-                <nav class="flex align-center">
-                    <ul class="flex align-center gap">
+            <div class="navigation-burger flex direction-column align-center" id="navigationBurger">
+                <nav class="flex align-center margin-top-50px margin-bottom-30px">
+                    <ul class="flex align-center direction-column gap">
                         <li><a href="" title="Accueil du site">Accueil</a></li>
                         <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
                         <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
@@ -58,8 +58,10 @@
                         <li><a href="" title="Accès à la partie contact">Contact</a></li>
                     </ul>
                 </nav>
-                <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
-                <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+                <div class="flex gap">
+                    <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
+                    <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+                </div>
             </div>
         </div>
     </header>
@@ -78,19 +80,21 @@
     <!-- Main pour le contenu de la page -->
     <main>
         <!-- Section pour afficher les catégories -->
-        <section class="categories container-full margin-top-50px margin-bottom-100px flex justify-between">
+        <section class="categories container-full container-marges-smartphone margin-top-50px margin-bottom-100px flex justify-between">
             <h2 class="large-12-12 margin-bottom-20px">Nos produits par catégorie</h2>
-            <article class="large-3-12 flex direction-column gap margin-bottom-100px">
+            <article class="large-3-12 small-3-4 flex direction-column gap margin-bottom-100px">
                 <div>
                     <h3>Chaussures</h3>
-                    <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    <div class="reponsive">
+                        <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    </div>
                 </div>
                 <p>
                     Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
                 </p>
                 <a class="button full" href="" title="Voir les modèles de chaussures">Voir les modèles de chaussures</a>
             </article>
-            <article class="large-3-12 flex direction-column gap margin-bottom-60px">
+            <article class="large-3-12 small-3-4 flex direction-column gap margin-bottom-60px">
                 <div>
                     <h3>Accessoires</h3>
                     <img src="./public/images/images-site/categorie-accessoires.jpg" alt="Photo d'un homme avec un appareil photo en montagnes">
@@ -100,7 +104,7 @@
                 </p>
                 <a class="button full" href="" title="Voir les accessoires">Voir les accessoires</a>
             </article>
-            <article class="large-3-12 flex direction-column gap margin-bottom-60px">
+            <article class="large-3-12 small-3-4 flex direction-column gap margin-bottom-60px">
                 <div>
                     <h3>Vêtements</h3>
                     <img src="./public/images/images-site/categorie-vetements.jpg" alt="Photo des jambes d'un coureur sur une route">
@@ -114,40 +118,42 @@
         <!-- Section pour la mise en avant de la gamme outdoor -->
         <section class="gamme-outdoor">
             <!-- Div pour la mise en avant de la gamme outdoor -->
-            <div class="container-full">
-                <div class="outdoor-accroche large-6-12 flex direction-column gap">
+            <div class="container-full container-marges-left-smartphone">
+                <div class="outdoor-accroche large-6-12 small-3-4 flex direction-column gap">
                     <h2>Découvrez notre gamme @utdoor</h2>
                     <p>
                         Une sélection parmis les vêtements techniques de notre fabrication ainsi que des meilleures marques sur le marché
                     </p>
                     <a class="button fit padding-button" href="" title="Voir les produits de la gamme @utdoor">Voir les articles de la gamme @utdoor</a>
                 </div>
-                <!-- Mise en avant d'un produit de la gamme outdoor -->
-                <article class="large-5-12 bg-black flex justify-between">
-                    <!-- Image du produit -->
-                    <div class="large-5-12 reponsive">
-                        <img src="./public/images/images-site/outdoor6.jpg" alt="Photo du tee-shirt Rando+">
-                    </div>
-                    <!-- Description du produit -->
-                    <div class="large-7-12 flex direction-column justify-between gap padding-20px">
-                        <!-- Entête avec le libellé et le prix -->
-                        <div class="flex justify-between">
-                            <strong>Nouveauté</strong>
-                            <span class="prix">40 €</span>
-                        </div>
-                        <p>
-                            Tee shirt technique rando+ , résistant , confortable, tissus déperlant
-                            <ul class="padding-top-20px">
-                                <li>Respirabilité</li>
-                                <li>Imperméabilité</li>
-                                <li>Anti odeurs</li>
-                            </ul>
-                        </p>
-                        <a href="" title="Voir le détail du Teeshirt Rando+"> Voir le détail du produit</a>
-                    </div>
-                </article>
             </div>
         </section>
+        <div class="article-outdoor container-full margin-bottom-60px">
+            <!-- Mise en avant d'un produit de la gamme outdoor -->
+            <article class="bg-black large-7-12 small-4-4 flex justify-between">
+                <!-- Image du produit -->
+                <div class="large-5-12 small-4-4 reponsive">
+                    <img src="./public/images/images-site/outdoor6.jpg" alt="Photo du tee-shirt Rando+">
+                </div>
+                <!-- Description du produit -->
+                <div class="large-7-12 small-4-4 flex direction-column justify-between gap padding-20px">
+                    <!-- Entête avec le libellé et le prix -->
+                    <div class="flex justify-between">
+                        <strong>Nouveauté</strong>
+                        <span class="prix">40 €</span>
+                    </div>
+                    <p>
+                        Tee shirt technique rando+ , résistant , confortable, tissus déperlant
+                        <ul class="padding-top-20px">
+                            <li>Respirabilité</li>
+                            <li>Imperméabilité</li>
+                            <li>Anti odeurs</li>
+                        </ul>
+                    </p>
+                    <a href="" title="Voir le détail du Teeshirt Rando+"> Voir le détail du produit</a>
+                </div>
+            </article>
+        </div>
         <!-- Section pour l'offre à mettre en avant -->
         <section class="container-full flex justify-between align-center margin-bottom-100px">
             <!-- Description de l'offre -->

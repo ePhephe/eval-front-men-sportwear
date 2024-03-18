@@ -12,3 +12,12 @@ L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.{e
 let marker = L.marker([45.439, 4.387], {
     color:'#0E6286'
 }).addTo(map);
+
+//On récupère les éléments pour le menu burger
+let divMenuBurger = document.getElementById(`menuBurger`);
+let divNavBurger = document.getElementById(`navigationBurger`);
+//On ajouter un listener click sur le menu burger
+divMenuBurger.addEventListener(`click`,(e)=>{
+    divMenuBurger.classList.toggle(`menu-burger-close`);
+    divNavBurger.classList.toggle(`navigation-burger-affiche`);    
+});
