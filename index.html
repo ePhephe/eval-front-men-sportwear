@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Référencement - Titre et meta description de la page -->
+    <title>Document</title>
+    <meta name="description" content="">
+    <!-- Fichiers style des librairies utilisées si nécessaire -->
+    <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css" />
+    <!-- Style CSS global -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!-- Mise en place du favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./public/images/favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
+    <header class="bg-black large-12-12">
+        <div class="container-full flex justify-between">
+            <!-- Logo de la marque avec un lien sur l'accueil -->
+            <div>
+                <a href="index.html" title="Accueil du site">
+                    <img src="./public/images/images-site/logo-blanc.png" alt="Logo de Men's Sportswear">
+                </a>
+            </div>
+            <!-- Menu de navigation (masqué en responsive) -->
+            <nav class="flex align-center navigation-classique">
+                <ul class="flex align-center gap">
+                    <li><a href="" title="Accueil du site">Accueil</a></li>
+                    <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
+                    <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
+                    <li><a href="" title="Accès à la page des accessoires">Accessoires</a></li>
+                    <li class="en-avant padding-button"><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
+                    <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Accès au panier et au compte, masqué en responsive -->
+            <div class="flex align-center gap navigation-classique">
+                <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
+                <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+            </div>
+            <div class="menu-burger" id="menuBurger">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+            </div>
+            <div class="navigation-burger">
+                <nav class="flex align-center">
+                    <ul class="flex align-center gap">
+                        <li><a href="" title="Accueil du site">Accueil</a></li>
+                        <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
+                        <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
+                        <li><a href="" title="Accès à la page des accessoires">Accessoires</a></li>
+                        <li class="en-avant padding-button"><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
+                        <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
+                <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+            </div>
+        </div>
+    </header>
+    <!-- On compense la position fixe du header -->
+    <div class="vide-header">
+    </div>
+    <!-- Partie pour le hero avec l'accorche -->
+    <div class="hero flex align-center justify-center">
+        <!-- Accroche de hero, l'image sera en background -->
+        <div class="accroche large-3-12 flex direction-column">
+            <h1>Ne cherchez plus chaussure à votre pied</h1>
+            <p>Découvrez notre nouvelle gamme de baskets M'S déclinée en 4 coloris</p>
+            <a class="button-cta fit padding-button" href="" title="">Découvrir la gamme</a>
+        </div>
+    </div>
+    <!-- Main pour le contenu de la page -->
+    <main>
+        <!-- Section pour afficher les catégories -->
+        <section class="categories container-full margin-top-50px margin-bottom-100px flex justify-between">
+            <h2 class="large-12-12 margin-bottom-20px">Nos produits par catégorie</h2>
+            <article class="large-3-12 flex direction-column gap margin-bottom-100px">
+                <div>
+                    <h3>Chaussures</h3>
+                    <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                </div>
+                <p>
+                    Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
+                </p>
+                <a class="button full" href="" title="Voir les modèles de chaussures">Voir les modèles de chaussures</a>
+            </article>
+            <article class="large-3-12 flex direction-column gap margin-bottom-60px">
+                <div>
+                    <h3>Accessoires</h3>
+                    <img src="./public/images/images-site/categorie-accessoires.jpg" alt="Photo d'un homme avec un appareil photo en montagnes">
+                </div>
+                <p>
+                    Sac à dos de randonnées, toiles de tente, réchauds, matériel de sport interieur et exterieur
+                </p>
+                <a class="button full" href="" title="Voir les accessoires">Voir les accessoires</a>
+            </article>
+            <article class="large-3-12 flex direction-column gap margin-bottom-60px">
+                <div>
+                    <h3>Vêtements</h3>
+                    <img src="./public/images/images-site/categorie-vetements.jpg" alt="Photo des jambes d'un coureur sur une route">
+                </div>
+                <p>
+                    Vêtements tous sports, jogging, shorts, tee-shirts , hoodies, vestes, chaussettes et débardeurs
+                </p>
+                <a class="button full" href="" title="Voir les modèles de vêtements">Voir les modèles de vêtements</a>
+            </article>
+        </section>
+        <!-- Section pour la mise en avant de la gamme outdoor -->
+        <section class="gamme-outdoor">
+            <!-- Div pour la mise en avant de la gamme outdoor -->
+            <div class="container-full">
+                <div class="outdoor-accroche large-6-12 flex direction-column gap">
+                    <h2>Découvrez notre gamme @utdoor</h2>
+                    <p>
+                        Une sélection parmis les vêtements techniques de notre fabrication ainsi que des meilleures marques sur le marché
+                    </p>
+                    <a class="button fit padding-button" href="" title="Voir les produits de la gamme @utdoor">Voir les articles de la gamme @utdoor</a>
+                </div>
+                <!-- Mise en avant d'un produit de la gamme outdoor -->
+                <article class="large-5-12 bg-black flex justify-between">
+                    <!-- Image du produit -->
+                    <div class="large-5-12 reponsive">
+                        <img src="./public/images/images-site/outdoor6.jpg" alt="Photo du tee-shirt Rando+">
+                    </div>
+                    <!-- Description du produit -->
+                    <div class="large-7-12 flex direction-column justify-between gap padding-20px">
+                        <!-- Entête avec le libellé et le prix -->
+                        <div class="flex justify-between">
+                            <strong>Nouveauté</strong>
+                            <span class="prix">40 €</span>
+                        </div>
+                        <p>
+                            Tee shirt technique rando+ , résistant , confortable, tissus déperlant
+                            <ul class="padding-top-20px">
+                                <li>Respirabilité</li>
+                                <li>Imperméabilité</li>
+                                <li>Anti odeurs</li>
+                            </ul>
+                        </p>
+                        <a href="" title="Voir le détail du Teeshirt Rando+"> Voir le détail du produit</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- Section pour l'offre à mettre en avant -->
+        <section class="container-full flex justify-between align-center margin-bottom-100px">
+            <!-- Description de l'offre -->
+            <div class="large-5-12 flex direction-column gap">
+                <h2>Profitez de l'offre</h2>
+                <strong>L’ensembe jogging M’S noir disponible en plusieurs tailles</strong>
+                <p>
+                    Ce jogging alie confort légereté et douceur, pour du sport a l’exterieur comme pour les moments de détente a la maison.
+                </p>
+                <a class="button fit padding-button" href="" title="Voir le détail du jogging M'S">Voir le détail du produit</a>
+            </div>
+            <!-- Image de l'offre -->
+            <div class="large-6-12">
+                <img src="./public/images/images-site/Joogin-promo.jpg" alt="Photo du jogging M'S noir">
+            </div>
+        </section>
+        <!-- Section pour les marques mises en lumière -->
+        <section class="bg-black">
+            <div class="container-full padding-top-30px padding-bottom-30px">
+                <h2 class="margin-bottom-20px">Ces marques nous font confiance</h2>
+                <div class="large-12-12 flex justify-around align-center">
+                    <div>
+                        <img src="./public/images/images-site/the-north-face.png" alt="Logo de la marque The North Face">
+                    </div>
+                    <div>
+                        <img src="./public/images/images-site/puma.png" alt="Logo de la marque Puma">
+                    </div>
+                    <div>
+                        <img src="./public/images/images-site/adidas.png" alt="Logo de la marque Adidas">
+                    </div>
+                    <div>
+                        <img src="./public/images/images-site/nike.png" alt="Logo de la marque Nike">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section pour le formulaire de contact -->
+        <section class="container-full margin-bottom-100px margin-top-100px flex justify-around">
+            <!-- Image en lien avec la partie contact -->
+            <div class="large-6-12">
+                <img src="./public/images/images-site/illustration-boxe.jpg" alt="Photo d'un boxeur qui s'entraine contre un sac de frappe">
+            </div>
+            <div class="large-6-12 flex direction-column gap">
+                <h2>Contactez-nous</h2>
+                <p>
+                    Pour des informations sur nos produits, pour toute demande de renseignement ou pour nous faire remonter un problème techique sur le site , merci de remplir le formulaire suivant
+                </p>
+                <!-- Formulaire de contact -->
+                <form class="large-10-12 flex gap" action="" method="post" id="form-contact">
+                    <div class="large-6-12">
+                        <label for="nom">Votre nom</label>
+                        <input type="text" name="nom" id="nom">
+                        <p class="p-error"  id="error-nom"></p>
+                    </div>
+                    <div class="large-6-12">
+                        <label for="prenom">Votre prénom</label>
+                        <input type="text" name="prenom" id="prenom">
+                        <p class="p-error"  id="error-prenom"></p>
+                    </div>
+                    <div class="large-12-12">
+                        <label for="email">Votre adresse de messagerie</label>
+                        <input type="email" name="email" id="email">
+                        <p class="p-error"  id="error-email"></p>
+                    </div>
+                    <div class="large-12-12">
+                        <label for="objet">Objet</label>
+                        <select name="objet" id="objet">
+                            <option value="">Choisissez l'objet de votre demande</option>
+                            <option value="info-generale">Demande d'information générale</option>
+                            <option value="probleme-site">Signaler un problème sur le site</option>
+                            <option value="info-produit">Demande d'information sur un produit</option>
+                            <option value="probleme-produit">Signaler un problème sur un produit</option>
+                        </select>
+                        <p class="p-error"  id="error-objet"></p>
+                    </div>
+                    <div class="large-12-12">
+                        <label for="message">Votre message</label>
+                        <textarea name="message" id="message"></textarea>
+                        <p class="p-error"  id="error-message"></p>
+                    </div>
+                    <input type="submit" value="Envoyer votre message">
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- Footer avec la carte et les différentes colonnes (Nav, Horaires et Nav des réseaux) -->
+    <footer class="bg-black padding-bottom-60px">
+        <!-- Section avec la carte des boutiques -->
+        <div class="boutiques container-full flex direction-column align-center gap padding-top-30px margin-bottom-100px">
+            <div>
+                <img src="./public/images/images-site/logo-blanc.png" alt="Logo de Men's Sportswear">
+            </div>
+            <strong>Retrouvez nos boutiques près de chez vous</strong>
+            <!-- Partie réservée à la carte -->
+            <div class="large-7-12" id="map"></div>
+        </div>
+        <!-- Section avec les colonnes du footer -->
+        <div class="container-full large-12-12 flex justify-around">
+            <div class="large-2-12 flex direction-column gap">
+                <h4>Plan du site</h4>
+                <nav>
+                    <ul>
+                        <li><a href="" title="Accueil du site">Accueil</a></li>
+                        <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
+                        <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
+                        <li><a href="" title="Accès à la page des accessoires">Accessoirs</a></li>
+                        <li><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
+                        <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="large-4-12 flex direction-column gap">
+                <h4>Horaires d'ouverture de nos boutiques</h4>
+                <p>
+                    Du  lundi au vendredi de 10h à 12h30 puis de<br> 13h30 a 19h<br>
+                    Le samedi de 9h a 18h30 non stop
+                </p>
+            </div>
+            <div class="large-4-12 flex direction-column gap">
+                <h4>Retrouvez nous sur les réseaux sociaux</h4>
+                <nav>
+                    <ul class="flex gap">
+                        <li>
+                            <a href="" title="Accès à notre compte X"><img src="./public/images/images-site/TwitterX.png" alt="Logo de X"></a>
+                        </li>
+                        <li>
+                            <a href="" title="Accès à notre compte Facebook"><img src="./public/images/images-site/Facebook.png" alt="Logo de Facebook"></a>
+                        </li>
+                        <li>
+                            <a href="" title="Accès à notre compte Tiktok"><img src="./public/images/images-site/TikTok.png" alt="Logo de Tiktok"></a>
+                        </li>
+                        <li>
+                            <a href="" title="Accès à notre compte Instagram"><img src="./public/images/images-site/Instagram.png" alt="Logo de Instagram"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Script des biliothèques si nécessaires -->
+    <script src="./public/js/library/leaflet/leaflet.js"></script>
+    <!-- Script global de l'application -->
+    <script src="./public/js/app.js"></script>
+    <!-- Scripts spécifiques à la page -->
+</body>
+</html>

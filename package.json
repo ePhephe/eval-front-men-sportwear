@@ -1,0 +1,15 @@
+{
+  "name": "eval-front-men-sportwear",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch assets/main.scss public/css/style.css",
+    "sass-prod": "sass --style=compressed assets/main.scss public/css/style.min.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.72.0"
+  }
+}

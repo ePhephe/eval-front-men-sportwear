@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url("../fonts/ArchivoBlack/ArchivoBlack-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+:root {
+    /* TYPOGRAPHIE */
+    --fontTitre: 'ArchivoBlack';
+    --fontTexte: 'Roboto';
+
+    /* Palette de couleurs */
+    --firstColor: #222222;
+    --secondColor: #0E6286;
+    --thirdColor: #EBEBEB;
+    --fourthColor: #FFFFFF;
+    --fifthColor: #3E8BAC;
+
+    /* Couleurs standards */
+    --succesColor: hsl(113, 53%, 53%);
+    --errorColor: hsl(0, 100%, 61%);
+
+    /* Gouttières et Espacements */
+    --gouttiere: 20px;
+    --marginDesktop: 120px;
+    --marginTablet: 40px;
+    --marginSmartphone: 20px;
+    --paddingButton: 12px 32px; 
+
+    /* RADIUS */
+    --radiusLarge: 30px;
+    --radiusMedium: 20px;
+    --radiusSmall: 10px;
+    --radiusRond: 50%;
+}
+
+/* Variables SCSS */
+$numberColumnDesktop: 12;
+$numberColumnTablet: 8;
+$numberColumnSmartphone: 4;
+
+$widthFull: 100%;
+$widthDesktop: 1200px;
+$widthTablet: 1024px;
+$widthSmartphone: 500px;

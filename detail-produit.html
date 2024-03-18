@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Référencement - Titre et meta description de la page -->
+    <title>Document</title>
+    <meta name="description" content="">
+    <!-- Fichiers style des librairies utilisées si nécessaire -->
+    <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css" />
+    <!-- Style CSS global -->
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!-- Mise en place du favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./public/images/favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
+    <header class="bg-black">
+        <div class="container-full flex justify-between">
+            <!-- Logo de la marque avec un lien sur l'accueil -->
+            <div>
+                <a href="index.html" title="Accueil du site">
+                    <img src="./public/images/images-site/logo-blanc.png" alt="Logo de Men's Sportswear">
+                </a>
+            </div>
+            <!-- Menu de navigation (masqué en responsive) -->
+            <nav class="flex align-center">
+                <ul class="flex align-center gap">
+                    <li><a href="" title="Accueil du site">Accueil</a></li>
+                    <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
+                    <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
+                    <li><a href="" title="Accès à la page des accessoires">Accessoires</a></li>
+                    <li class="en-avant padding-button"><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
+                    <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Accès au panier et au compte, masqué en responsive -->
+            <div class="flex align-center gap">
+                <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
+                <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+            </div>
+        </div>
+    </header>
+    <!-- Main pour le contenu de la page -->
+    <main class="container-full">
+        <div class="fil-ariane margin-top-30px margin-bottom-30px flex">
+            <div class="categorie">
+                Chaussures >
+            </div>
+            <div class="sous-categorie">
+                Baskets >
+            </div>
+            <div class="produit">
+                Libelle du produit
+            </div>
+        </div>
+        <section class="detail-produit large-12-12 flex justify-between margin-bottom-100px">
+            <div class="large-5-12">
+                <img src="./public/images/details-produit/basket2-bleu.png" alt="Photo de la basket en bleu">
+            </div>
+            <div class="large-6-12 flex direction-column gap">
+                <div class="flex justify-between">
+                    <h1 class="large-9-12">Libellé du produit</h1>
+                    <span class="prix">149 €</span>
+                </div>
+                <p>
+                    Dernière née de la gamme, cette basket est conçue pour la course
+                    a pied sur bitume comme sur les chemins légèrement escarpés.
+                <ul>
+                    <li>semelle : caoutchouc naturel anti dérapant</li>
+                    <li>bon maintien tu pied</li>
+                    <li>Aération optimale grâce a la structure micro alvéolée de sa coque</li>
+                </ul>
+                </p>
+                <div class="flex justify-between">
+                    <span>Couleurs disponibles</span>
+                    <div class="flex gap">
+                        <a href="" title=""><div class="pastille-couleur couleur-bleu"></div></a>
+                        <a href="" title=""><div class="pastille-couleur couleur-violet"></div></a>
+                        <a href="" title=""><div class="pastille-couleur couleur-orange"></div></a>
+                        <a href="" title=""><div class="pastille-couleur couleur-vert"></div></a>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <label for="tailles" class="large-6-12">Tailles disponibles</label>
+                    <select class="large-4-12" name="tailles" id="tailles">
+                        <option value="">Sélectionnez votre taille</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                    </select>
+                </div>
+                <div class="flex justify-between">
+                    <span>Nombre d'articles en stock</span>
+                    <div>67</div>
+                </div>
+                <a class="button-cta fit padding-button" href="" title="">Ajouter au panier</a>
+            </div>
+        </section>
+        <!-- Section pour les avis client -->
+        <section class="margin-bottom-100px flex gap">
+            <h2 class="margin-bottom-30px">Avis des consommateurs</h2>
+            <article class="flex align-center">
+                <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
+                    <img src="./public/images/images-site/header-account.png" alt="Icône représentant un avis utilisateur">
+                </div>
+                <div class="large-8-12 flex direction-column gap">
+                    <div class="flex gap">
+                        <span class="nom-avis">Nicolas</span>
+                        <span>★★★★☆</span>
+                    </div>
+                    <p>Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
+                        et faciles a porter, je recommande grandement ce produit</p>
+                </div>
+            </article>
+            <article class="flex align-center">
+                <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
+                    <img src="./public/images/images-site/header-account.png" alt="Icône représentant un avis utilisateur">
+                </div>
+                <div class="large-8-12 flex direction-column gap">
+                    <div class="flex gap">
+                        <span class="nom-avis">Nicolas</span>
+                        <span>★★★★☆</span>
+                    </div>
+                    <p>Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
+                        et faciles a porter, je recommande grandement ce produit</p>
+                </div>
+            </article>
+            <article class="flex align-center">
+                <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
+                    <img src="./public/images/images-site/header-account.png" alt="Icône représentant un avis utilisateur">
+                </div>
+                <div class="large-8-12 flex direction-column gap">
+                    <div class="flex gap">
+                        <span class="nom-avis">Nicolas</span>
+                        <span>★★★★☆</span>
+                    </div>
+                    <p>Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
+                        et faciles a porter, je recommande grandement ce produit</p>
+                </div>
+            </article>
+            <article></article>
+            <article></article>
+
+        </section>
+    </main>
+    <!-- Footer avec la carte et les différentes colonnes (Nav, Horaires et Nav des réseaux) -->
+    <footer class="bg-black padding-bottom-60px">
+        <!-- Section avec la carte des boutiques -->
+        <div class="boutiques container-full flex direction-column align-center gap padding-top-30px margin-bottom-100px">
+            <div>
+                <img src="./public/images/images-site/logo-blanc.png" alt="Logo de Men's Sportswear">
+            </div>
+            <strong>Retrouvez nos boutiques près de chez vous</strong>
+            <!-- Partie réservée à la carte -->
+            <div class="large-7-12" id="map"></div>
+        </div>
+        <!-- Section avec les colonnes du footer -->
+        <div class="container-full large-12-12 flex justify-around">
+            <div class="large-2-12 flex direction-column gap">
+                <h4>Plan du site</h4>
+                <nav>
+                    <ul>
+                        <li><a href="" title="Accueil du site">Accueil</a></li>
+                        <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
+                        <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
+                        <li><a href="" title="Accès à la page des accessoires">Accessoirs</a></li>
+                        <li><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
+                        <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="large-4-12 flex direction-column gap">
+                <h4>Horaires d'ouverture de nos boutiques</h4>
+                <p>
+                    Du  lundi au vendredi de 10h à 12h30 puis de<br> 13h30 a 19h<br>
+                    Le samedi de 9h a 18h30 non stop
+                </p>
+            </div>
+            <div class="large-4-12 flex direction-column gap">
+                <h4>Retrouvez nous sur les réseaux sociaux</h4>
+                <nav>
+                    <ul class="flex gap">
+                        <li>
+                            <a href="" title="Accès à notre compte X"><img src="./public/images/images-site/TwitterX.png" alt="Logo de X"></a>
+                        </li>
+                        <li>
+                            <a href="" title="Accès à notre compte Facebook"><img src="./public/images/images-site/Facebook.png" alt="Logo de Facebook"></a>
+                        </li>
+                        <li>
+                            <a href="" title="Accès à notre compte Tiktok"><img src="./public/images/images-site/TikTok.png" alt="Logo de Tiktok"></a>
+                        </li>
+                        <li>
+                            <a href="" title="Accès à notre compte Instagram"><img src="./public/images/images-site/Instagram.png" alt="Logo de Instagram"></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Script des biliothèques si nécessaires -->
+    <script src="./public/js/library/leaflet/leaflet.js"></script>
+    <!-- Script global de l'application -->
+    <script src="./public/js/app.js"></script>
+    <!-- Scripts spécifiques à la page -->
+</body>
+</html>

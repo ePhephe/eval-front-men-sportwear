@@ -1,0 +1,36 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.content-center {
+    align-content: center;
+}
+
+.gap {
+    gap: var(--gouttiere);
+}

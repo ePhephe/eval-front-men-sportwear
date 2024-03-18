@@ -1,0 +1,98 @@
+[
+    {
+        "nom": "Nike Air Max 90",
+        "description": "Les Nike Air Max 90 offrent un confort et un style intemporel, parfaits pour le quotidien.",
+        "prix": 129.99,
+        "photo": "basket1.jpg"
+    },
+    {
+        "nom": "Adidas Ultraboost",
+        "description": "Les Adidas Ultraboost offrent un amorti réactif et un ajustement parfait pour des performances exceptionnelles.",
+        "prix": 159.99,
+        "photo": "basket2.jpg"
+    },
+    {
+        "nom": "New Balance 574",
+        "description": "Les New Balance 574 combinent style classique et confort pour une allure décontractée.",
+        "prix": 89.99,
+        "photo": "basket3.jpg"
+    },
+    {
+        "nom": "Puma RS-X",
+        "description": "Les Puma RS-X offrent un design audacieux et un confort supérieur pour des performances optimales.",
+        "prix": 109.99,
+        "photo": "basket4.jpg"
+    },
+    {
+        "nom": "Asics Gel-Kayano",
+        "description": "Les Asics Gel-Kayano offrent un soutien exceptionnel et un amorti supérieur pour les coureurs sérieux.",
+        "prix": 149.99,
+        "photo": "basket5.jpg"
+    },
+    {
+        "nom": "Under Armour HOVR Phantom",
+        "description": "Les Under Armour HOVR Phantom offrent une sensation de légèreté et de réactivité pour une course fluide.",
+        "prix": 139.99,
+        "photo": "basket6.jpg"
+    },
+    {
+        "nom": "Reebok Classic Leather",
+        "description": "Les Reebok Classic Leather offrent un style rétro et un confort durable pour un look urbain décontracté.",
+        "prix": 79.99,
+        "photo": "basket7.jpg"
+    },
+    {
+        "nom": "Saucony Jazz Original",
+        "description": "Les Saucony Jazz Original sont des baskets légères et confortables, parfaites pour une journée active.",
+        "prix": 69.99,
+        "photo": "basket8.jpg"
+    },
+    {
+        "nom": "Brooks Ghost 13",
+        "description": "Les Brooks Ghost 13 offrent un amorti équilibré et un ajustement confortable pour des kilomètres sans fin.",
+        "prix": 129.99,
+        "photo": "basket9.jpg"
+    },
+    {
+        "nom": "Mizuno Wave Rider",
+        "description": "Les Mizuno Wave Rider offrent une foulée fluide et un soutien fiable pour des performances constantes.",
+        "prix": 139.99,
+        "photo": "basket10.jpg"
+    },
+    {
+        "nom": "Fila Disruptor II",
+        "description": "Les Fila Disruptor II offrent un style rétro audacieux et un confort supérieur pour un look tendance.",
+        "prix": 99.99,
+        "photo": "basket11.jpg"
+    },
+    {
+        "nom": "Converse Chuck Taylor All Star",
+        "description": "Les Converse Chuck Taylor All Star sont des classiques intemporels, parfaits pour une touche décontractée.",
+        "prix": 59.99,
+        "photo": "basket12.jpg"
+    },
+    {
+        "nom": "Vans Old Skool",
+        "description": "Les Vans Old Skool offrent un style emblématique et un confort durable pour une silhouette élégante.",
+        "prix": 79.99,
+        "photo": "basket13.jpg"
+    },
+    {
+        "nom": "DC Shoes Pure",
+        "description": "Les DC Shoes Pure offrent un style skateboard authentique et un confort optimal pour les skateurs urbains.",
+        "prix": 89.99,
+        "photo": "basket14.jpg"
+    },
+    {
+        "nom": "Salomon Speedcross 5",
+        "description": "Les Salomon Speedcross 5 offrent une adhérence exceptionnelle et une protection contre les terrains difficiles.",
+        "prix": 149.99,
+        "photo": "basket15.jpg"
+    },
+    {
+        "nom": "Merrell Moab 2 Vent",
+        "description": "Les Merrell Moab 2 Vent offrent une respirabilité maximale et une durabilité pour les aventures en plein air.",
+        "prix": 109.99,
+        "photo": "basket16.jpg"
+    }
+]

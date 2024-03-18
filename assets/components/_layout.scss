@@ -1,0 +1,147 @@
+@use "sass:map";
+
+@function large($numberColumn, $i) {
+  @return calc((100% / ($numberColumn / $i)) - ((($numberColumn / $i) - 1) * var(--gouttiere)) / ($numberColumn / $i));
+}
+
+
+@mixin largeur-modifier($numberColumn) {
+  @for $i from 1 to $numberColumn+1 {
+    &-#{$i}-#{$numberColumn} {
+      width: large($numberColumn, $i);
+    }
+  }
+}
+
+/*Generation des classes pour la largeur des colonnes selon 
+les resolutions d'ecrans*/
+.full {
+  width: $widthFull;
+}
+
+.fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+/*Desktop*/
+.large {
+  @include largeur-modifier($numberColumnDesktop);
+}
+
+/*Container Desktop*/
+.container-full {
+  max-width: $widthDesktop;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-marges-desktop {
+  padding-left: var(--marginDesktop);
+  padding-right: var(--marginDesktop);
+}
+
+.container-marges-left-desktop {
+  padding-left: var(--marginDesktop);
+}
+
+.container-marges-right-desktop {
+  padding-right: var(--marginDesktop);
+}
+
+/*Tablets*/
+@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+  .medium {
+    @include largeur-modifier($numberColumnTablet);
+  }
+
+  /*Container Tablet*/
+  .container-full {
+    max-width: $widthTablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-marges-tablet {
+    padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+
+  .container-marges-left-tablet {
+    padding-left: var(--marginTablet);
+  }
+
+  .container-marges-right-tablet {
+    padding-right: var(--marginTablet);
+  }
+}
+
+/*Smartphones*/
+@media all and (max-width : $widthSmartphone) {
+  .small {
+    @include largeur-modifier($numberColumnSmartphone);
+  }
+
+  /*Container Smartphone*/
+  .container-full {
+    max-width: $widthSmartphone;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-marges-smartphone {
+    padding-left: var(--marginSmartphone);
+    padding-right: var(--marginSmartphone);
+  }
+
+  .container-marges-left-smartphone {
+    padding-left: var(--marginSmartphone);
+  }
+
+  .container-marges-right-smartphone {
+    padding-right: var(--marginSmartphone);
+  }
+}
+
+/************* Marges et Paddings Génériques **************/
+$cote: (
+  1: "-top",
+  2: "-bottom",
+  3: "-left",
+  4: "-right",
+  5: ""
+);
+
+/* On génère des marges multiples de 10 */
+@function marges($i) {
+  @return calc($i*10px);
+}
+
+/* Génération des margins */
+@mixin marges-generiques() {
+  @for $j from 1 to 6 {
+    @for $i from 1 to 11 {
+      &#{map.get($cote,$j)}-#{marges($i)} {
+        margin#{map.get($cote,$j)}: marges($i);
+      }
+    }
+  }
+}
+
+/* Génération des paddings */
+@mixin padding-generiques() {
+  @for $j from 1 to 6 {
+    @for $i from 1 to 11 {
+      &#{map.get($cote,$j)}-#{marges($i)} {
+        padding#{map.get($cote,$j)}: marges($i);
+      }
+    }
+  }
+}
+
+.margin {
+  @include marges-generiques();
+}
+
+.padding {
+  @include padding-generiques();
+}
