@@ -35,7 +35,7 @@
     gap: var(--gouttiere);
 }
 
-@media all and (max-width : $widthTablet) {
+@media all and (max-width : $widthMinDesktop) {
     .direction-column-reverse-responsive {
         flex-direction: column-reverse;
     }

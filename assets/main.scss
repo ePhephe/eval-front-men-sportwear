@@ -23,7 +23,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
-.responsive img {
+.responsive {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -316,6 +316,10 @@ header nav li:hover {
         display: none;
     }
 
+    .categories {
+        justify-content: space-around;
+    }
+
     /* Section pour la gamme outdoor */
     .gamme-outdoor {
         background-image: url("../images/images-site/accueil-bg-outdoor.jpg");
@@ -330,7 +334,8 @@ header nav li:hover {
         transform: none;
     }
     .article-outdoor {
-        margin-top: 40px;
+        margin-top: 0;
+        margin-left: 0;
     }
 
     .colonnes-footer>div {

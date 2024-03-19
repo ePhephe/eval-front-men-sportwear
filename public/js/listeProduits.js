@@ -139,8 +139,8 @@ function afficheProduits(tabProduits) {
     tabProduits.forEach(unProduit => {
         templateHTML += `<article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 padding-20px">
             <a class="flex direction-column gap" href="./detail-produit.html?id-produit=365896" title="Accès à la page produit de la ${unProduit.nom}">
-                <div>
-                    <img src="./public/images/images-produits/${unProduit.photo}" alt="Photos de la paire de basket ${unProduit.nom}">
+                <div class="large-12-12">
+                    <img class="responsive" src="./public/images/images-produits/${unProduit.photo}" alt="Photos de la paire de basket ${unProduit.nom}">
                 </div>
                 <div class="flex justify-between">
                     <h3 class="large-7-12">${unProduit.nom}</h3>

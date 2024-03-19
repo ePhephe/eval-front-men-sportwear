@@ -15,11 +15,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./public/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./public/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./public/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./public/images/favicon/site.webmanifest">
 </head>
 <body>
     <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
-    <header class="bg-black large-12-12 container-marges-smartphone">
+    <header class="bg-black large-12-12 container-marges-smartphone container-marges-tablet">
         <div class="container-full flex justify-between">
             <!-- Logo de la marque avec un lien sur l'accueil -->
             <div>
@@ -79,13 +78,13 @@
     <!-- Main pour le contenu de la page -->
     <main>
         <!-- Section pour afficher les catégories -->
-        <section class="categories container-full container-marges-smartphone container-marges-tablet margin-top-50px margin-bottom-100px flex justify-between">
+        <section class="categories container-full container-marges-smartphone container-marges-tablet margin-top-50px margin-bottom-100px flex justify-between gap">
             <h2 class="large-12-12 margin-bottom-20px">Nos produits par catégorie</h2>
             <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
-                <div>
-                    <h3>Chaussures</h3>
-                    <div class="responsive">
-                        <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                <div class="flex">
+                    <h3 class="large-12-12">Chaussures</h3>
+                    <div class="large-12-12">
+                        <img class="responsive" src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
                     </div>
                 </div>
                 <p>
@@ -94,10 +93,10 @@
                 <a class="button full" href="./liste-categories.html?rub=chaussures" title="Voir les modèles de chaussures">Voir les modèles de chaussures</a>
             </article>
             <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
-                <div>
-                    <h3>Accessoires</h3>
-                    <div class="responsive">
-                        <img src="./public/images/images-site/categorie-accessoires.jpg" alt="Photo d'un homme avec un appareil photo en montagnes">
+                <div class="flex">
+                    <h3 class="large-12-12">Accessoires</h3>
+                    <div class="large-12-12">
+                        <img class="responsive" src="./public/images/images-site/categorie-accessoires.jpg" alt="Photo d'un homme avec un appareil photo en montagnes">
                     </div>
                 </div>
                 <p>
@@ -106,10 +105,10 @@
                 <a class="button full" href="./liste-categories.html?rub=accessoires" title="Voir les accessoires">Voir les accessoires</a>
             </article>
             <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
-                <div>
-                    <h3>Vêtements</h3>
-                    <div class="responsive">
-                        <img src="./public/images/images-site/categorie-vetements.jpg" alt="Photo des jambes d'un coureur sur une route">
+                <div class="flex">
+                    <h3 class="large-12-12">Vêtements</h3>
+                    <div class="large-12-12">
+                        <img class="responsive" src="./public/images/images-site/categorie-vetements.jpg" alt="Photo des jambes d'un coureur sur une route">
                     </div>
                 </div>
                 <p>
@@ -151,13 +150,13 @@
                 </div>
             </div>
         </section>
-        <div data-aos="fade-up" class="article-outdoor container-full margin-bottom-60px">
+        <div data-aos="fade-up" class="article-outdoor margin-left-100px margin-bottom-60px">
             <!-- Mise en avant d'un produit de la gamme outdoor -->
             <article class="bg-black large-7-12 small-4-4 medium-8-8 flex justify-between">
                 <!-- Image du produit -->
-                <div class="large-5-12 small-4-4 medium-4-8 bg-white responsive flex justify-center
+                <div class="large-5-12 small-4-4 medium-4-8 bg-white flex justify-center
                  align-center">
-                    <img src="./public/images/images-site/outdoor6.jpg" alt="Photo du tee-shirt Rando+">
+                    <img class="responsive" src="./public/images/images-site/outdoor6.jpg" alt="Photo du tee-shirt Rando+">
                 </div>
                 <!-- Description du produit -->
                 <div class="large-7-12 small-4-4 medium-4-8 flex direction-column justify-between gap padding-20px">
@@ -191,7 +190,7 @@
             </div>
             <!-- Image de l'offre -->
             <div data-aos="fade-left" class="large-6-12 small-4-4 medium-8-8">
-                <img src="./public/images/images-site/Joogin-promo.jpg" alt="Photo du jogging M'S noir">
+                <img class="responsive" src="./public/images/images-site/Joogin-promo.jpg" alt="Photo du jogging M'S noir">
             </div>
         </section>
         <!-- Section pour les marques mises en lumière -->
@@ -225,8 +224,8 @@
         <!-- Section pour le formulaire de contact -->
         <section class="section-contact container-full margin-bottom-100px margin-top-100px flex direction-column-reverse-responsive justify-around gap">
             <!-- Image en lien avec la partie contact -->
-            <div class="large-5-12 small-4-4 medium-8-8 responsive bg-black">
-                <img src="./public/images/images-site/illustration-boxe.jpg" alt="Photo d'un boxeur qui s'entraine contre un sac de frappe">
+            <div class="large-5-12 small-4-4 medium-8-8 bg-black">
+                <img class="responsive" src="./public/images/images-site/illustration-boxe.jpg" alt="Photo d'un boxeur qui s'entraine contre un sac de frappe">
             </div>
             <div class="large-6-12 small-4-4 medium-8-8 flex direction-column container-marges-smartphone container-marges-tablet  gap">
                 <h2>Contactez-nous</h2>
