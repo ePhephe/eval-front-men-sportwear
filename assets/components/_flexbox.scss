@@ -34,3 +34,13 @@
 .gap {
     gap: var(--gouttiere);
 }
+
+@media all and (max-width : $widthTablet) {
+    .direction-column-reverse-responsive {
+        flex-direction: column-reverse;
+    }
+
+    .direction-column-responsive {
+        flex-direction: column;
+    }
+}

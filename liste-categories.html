@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Référencement - Titre et meta description de la page -->
-    <title>Toutes nos baskets pour homme - Destinées aux sportifs </title>
+    <title>Toutes nos chaussures pour homme - Destinées aux sportifs</title>
     <meta name="description" content="">
     <!-- Fichiers style des librairies utilisées si nécessaire -->
     <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css" />
@@ -71,54 +71,61 @@
     <main class="container-full container-marges-smartphone container-marges-tablet">
         <div class="fil-ariane margin-top-30px margin-bottom-30px flex">
             <div class="categorie">
-                <a href="./liste-categories.html?rub=chaussures" title="Accès à la catégorie des chaussures">Chaussures</a> >
-            </div>
-            <div class="sous-categorie">
-                <a href="./liste-produits.html?cat=baskets" title="Accès à la catégorie des baskets">Baskets</a> >
+                <a href="" title="Accès à la catégorie des chaussures">Chaussures</a> >
             </div>
         </div>
-        <h1>Toutes nos baskets pour homme - Destinées aux sportifs </h1>
-        <form action="" method="post" id="filtre-produit" class="large-12-12 flex gap justify-between margin-top-30px direction-column-responsive">
-            <div class="large-7-12 medium-8-8 small-4-4">
-                <label for="search">Recherchez un produit :</label>
-                <input type="search" name="search" id="search" placeholder="Recherchez une paire de basket par son libellé">
-                <p class="p-error d-none"  id="error-search"></p>
-            </div>
-            <div class="large-2-12 medium-4-8 small-2-4">
-                <label for="prix-mini"> Prix minimum : </label>
-                <input type="number" name="prix-mini" id="prix-mini">
-                <p class="p-error d-none"  id="error-prix-mini"></p>
-            </div>
-            <div class="large-2-12 medium-4-8 small-2-4">
-                <label for="prix-maxi">Prix maximum :</label>
-                <input type="number" name="prix-maxi" id="prix-maxi">
-                <p class="p-error d-none"  id="error-prix-maxi"></p>
-            </div>
-            <div class="large-3-12 medium-4-8 small-2-4">
-                <label for="tri-prix">Trier :</label>
-                <select name="tri-prix" id="tri-prix">
-                    <option value="">Choissisez le critère de tri</option>
-                    <option value="prix-asc">Prix croissant</option>
-                    <option value="prix-desc">Prix décroissant</option>
-                </select>
-            </div>
-        </form>
-        <div class="liste-produits flex gap margin-top-30px margin-bottom-100px" id="listeProduits">
-            <!-- Template 
-            <article class="large-3-12 small-4-4 medium-4-8 flex direction-column gap padding-20px">
+        
+        <section class="categories container-full container-marges-smartphone container-marges-tablet margin-top-50px margin-bottom-100px flex justify-between">
+            <h1 class="large-12-12 margin-bottom-30px">Toutes nos chaussures pour homme - Destinés aux sportifs </h1>
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
                 <div>
-                    <img src="./public/images/images-produits/basket1.jpg" alt="Photos de la paire de basket XXX">
-                </div>
-                <div class="flex justify-between align-center">
-                    <h3 class="large-10-12">Nom du modèle</h3>
-                    <span class="prix">40 €</span>
+                    <h3>Baskets</h3>
+                    <div class="responsive">
+                        <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    </div>
                 </div>
                 <p>
-                    Petite description du produit sur quelques lignes vite fait, et encore un peu plus
+                    Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
                 </p>
+                <a class="button full" href="./liste-produits.html?cat=baskets" title="Voir les modèles de chaussures">Voir les baskets</a>
             </article>
-            -->
-        </div>
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
+                <div>
+                    <h3>Chaussures de montagnes</h3>
+                    <div class="responsive">
+                        <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    </div>
+                </div>
+                <p>
+                    Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
+                </p>
+                <a class="button full" href="" title="Voir les modèles de chaussures">Voir les chaussures de montage</a>
+            </article>
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
+                <div>
+                    <h3>Chaussures hautes</h3>
+                    <div class="responsive">
+                        <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    </div>
+                </div>
+                <p>
+                    Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
+                </p>
+                <a class="button full" href="" title="Voir les modèles de chaussures">Voir les chaussures hautes</a>
+            </article>
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
+                <div>
+                    <h3>Chaussures basses</h3>
+                    <div class="responsive">
+                        <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    </div>
+                </div>
+                <p>
+                    Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
+                </p>
+                <a class="button full" href="" title="Voir les modèles de chaussures">Voir les chaussures basses</a>
+            </article>
+        </section>
     </main>
     <!-- Footer avec la carte et les différentes colonnes (Nav, Horaires et Nav des réseaux) -->
     <footer class="bg-black padding-bottom-60px">
@@ -183,6 +190,5 @@
     <!-- Script global de l'application -->
     <script src="./public/js/app.js"></script>
     <!-- Scripts spécifiques à la page -->
-    <script src="./public/js/listeProduits.js"></script>
 </body>
 </html>

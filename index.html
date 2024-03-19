@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Référencement - Titre et meta description de la page -->
-    <title>Document</title>
+    <title>Tout l'équipement de qualité pour les hommes sportifs, spécialiste outdoor</title>
     <meta name="description" content="">
     <!-- Fichiers style des librairies utilisées si nécessaire -->
     <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="./public/js/library/aos-master/dist/aos.css">
     <!-- Style CSS global -->
     <link rel="stylesheet" href="./public/css/style.css">
     <!-- Mise en place du favicon -->
@@ -18,7 +19,7 @@
 </head>
 <body>
     <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
-    <header class="bg-black">
+    <header class="bg-black large-12-12 container-marges-smartphone">
         <div class="container-full flex justify-between">
             <!-- Logo de la marque avec un lien sur l'accueil -->
             <div>
@@ -29,12 +30,11 @@
             <!-- Menu de navigation (masqué en responsive) -->
             <nav class="flex align-center navigation-classique">
                 <ul class="flex align-center gap">
-                    <li><a href="" title="Accueil du site">Accueil</a></li>
-                    <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
-                    <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
-                    <li><a href="" title="Accès à la page des accessoires">Accessoires</a></li>
-                    <li class="en-avant padding-button"><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
-                    <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                    <li><a href="./index.html" title="Accueil du site">Accueil</a></li>
+                    <li><a href="./liste-categories.html?rub=chaussures" title="Accès à la page des chaussures">Chaussures</a></li>
+                    <li><a href="./liste-categories.html?rub=vetements" title="Accès à la page des vêtements">Vêtements</a></li>
+                    <li><a href="./liste-categories.html?rub=accessoires" title="Accès à la page des accessoires">Accessoires</a></li>
+                    <li class="en-avant padding-button"><a href="./liste-categories.html?rub=outdoor" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
                 </ul>
             </nav>
             <!-- Accès au panier et au compte, masqué en responsive -->
@@ -50,12 +50,11 @@
             <div class="navigation-burger flex direction-column align-center" id="navigationBurger">
                 <nav class="flex align-center margin-top-50px margin-bottom-30px">
                     <ul class="flex align-center direction-column gap">
-                        <li><a href="" title="Accueil du site">Accueil</a></li>
-                        <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
-                        <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
-                        <li><a href="" title="Accès à la page des accessoires">Accessoires</a></li>
-                        <li class="en-avant padding-button"><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
-                        <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                        <li><a href="./index.html" title="Accueil du site">Accueil</a></li>
+                        <li><a href="./liste-categories.html?rub=chaussures" title="Accès à la page des chaussures">Chaussures</a></li>
+                        <li><a href="./liste-categories.html?rub=vetements" title="Accès à la page des vêtements">Vêtements</a></li>
+                        <li><a href="./liste-categories.html?rub=accessoires" title="Accès à la page des accessoires">Accessoires</a></li>
+                        <li class="en-avant padding-button"><a href="./liste-categories.html?rub=outdoor" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
                     </ul>
                 </nav>
                 <div class="flex gap">
@@ -71,72 +70,97 @@
     <!-- Partie pour le hero avec l'accorche -->
     <div class="hero flex align-center justify-center">
         <!-- Accroche de hero, l'image sera en background -->
-        <div class="accroche large-3-12 flex direction-column">
-            <h1>Ne cherchez plus chaussure à votre pied</h1>
+        <div class="accroche large-4-12 flex direction-column">
+            <h2>Ne cherchez plus chaussure à votre pied</h2>
             <p>Découvrez notre nouvelle gamme de baskets M'S déclinée en 4 coloris</p>
-            <a class="button-cta fit padding-button" href="" title="">Découvrir la gamme</a>
+            <a class="button-cta fit padding-button" href="./detail-produit.html?id-produit=112313" title="">Découvrir la gamme</a>
         </div>
     </div>
     <!-- Main pour le contenu de la page -->
     <main>
         <!-- Section pour afficher les catégories -->
-        <section class="categories container-full container-marges-smartphone margin-top-50px margin-bottom-100px flex justify-between">
+        <section class="categories container-full container-marges-smartphone container-marges-tablet margin-top-50px margin-bottom-100px flex justify-between">
             <h2 class="large-12-12 margin-bottom-20px">Nos produits par catégorie</h2>
-            <article class="large-3-12 small-3-4 flex direction-column gap margin-bottom-100px">
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
                 <div>
                     <h3>Chaussures</h3>
-                    <div class="reponsive">
+                    <div class="responsive">
                         <img src="./public/images/images-site/categorie-chaussures.jpg" alt="Photo des jambes d'un coureur sur une route">
                     </div>
                 </div>
                 <p>
                     Baskets, Chaussures de montagnes, Chaussures hautes, chaussures basses, ... partez bien équipés
                 </p>
-                <a class="button full" href="" title="Voir les modèles de chaussures">Voir les modèles de chaussures</a>
+                <a class="button full" href="./liste-categories.html?rub=chaussures" title="Voir les modèles de chaussures">Voir les modèles de chaussures</a>
             </article>
-            <article class="large-3-12 small-3-4 flex direction-column gap margin-bottom-60px">
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
                 <div>
                     <h3>Accessoires</h3>
-                    <img src="./public/images/images-site/categorie-accessoires.jpg" alt="Photo d'un homme avec un appareil photo en montagnes">
+                    <div class="responsive">
+                        <img src="./public/images/images-site/categorie-accessoires.jpg" alt="Photo d'un homme avec un appareil photo en montagnes">
+                    </div>
                 </div>
                 <p>
                     Sac à dos de randonnées, toiles de tente, réchauds, matériel de sport interieur et exterieur
                 </p>
-                <a class="button full" href="" title="Voir les accessoires">Voir les accessoires</a>
+                <a class="button full" href="./liste-categories.html?rub=accessoires" title="Voir les accessoires">Voir les accessoires</a>
             </article>
-            <article class="large-3-12 small-3-4 flex direction-column gap margin-bottom-60px">
+            <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
                 <div>
                     <h3>Vêtements</h3>
-                    <img src="./public/images/images-site/categorie-vetements.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    <div class="responsive">
+                        <img src="./public/images/images-site/categorie-vetements.jpg" alt="Photo des jambes d'un coureur sur une route">
+                    </div>
                 </div>
                 <p>
                     Vêtements tous sports, jogging, shorts, tee-shirts , hoodies, vestes, chaussettes et débardeurs
                 </p>
-                <a class="button full" href="" title="Voir les modèles de vêtements">Voir les modèles de vêtements</a>
+                <a class="button full" href="./liste-categories.html?rub=vetements" title="Voir les modèles de vêtements">Voir les modèles de vêtements</a>
             </article>
+        </section>
+        <!-- Section pour le H1 et présentation de l'entreprise -->
+        <section class="container-full margin-top-50px margin-bottom-50px flex align-center gap">
+            <!-- Image de présentation -->
+            <div data-aos="fade-right" class="large-6-12 small-4-4 medium-8-8 container-marges-tablet">
+                <img src="./public/images/images-site/photo-escalade.jpg" alt="Photo de deux hommes qui escaladent">
+            </div>
+            <!-- Description de l'entreprise avec le H1 -->
+            <div data-aos="fade-left" class="description-entreprise large-6-12 small-4-4 medium-8-8 container-marges-tablet container-marges-smartphone flex direction-column gap">
+                <h1>Tout l'équipement de qualité pour les hommes sportifs, spécialiste outdoor.</h1>
+                <p>
+                    M’S est une boutique fondée en 1993 <strong>spécialisée dans les vêtements , chaussures et équipements
+                        divers de sports pour hommes</strong>. Notre objectif est de vous fournir le meilleur pour la pratique
+                    de vos activités sportives en intérieur comme en extérieur. Nous travaillons avec les plus grandes marques
+                    et nous disposons de nos propres ateliers de fabrication. Parmi les nouveautés issues de notre pole
+                    recherche et développement, <strong>les produits de la gamme @utdoor</strong> pour les activités de plein air, qui allient
+                    confort, respirabilité et protection grâce a nos matériaux à la pointe de la technologie textile.
+                </p>
+                <a class="button-cta fit padding-button" href="#map" title="Accès à la carte de nos boutiques">Où nous trouver ?</a>
+            </div>
         </section>
         <!-- Section pour la mise en avant de la gamme outdoor -->
         <section class="gamme-outdoor">
             <!-- Div pour la mise en avant de la gamme outdoor -->
-            <div class="container-full container-marges-left-smartphone">
+            <div class="container-full container-marges-left-smartphone container-marges-left-tablet">
                 <div class="outdoor-accroche large-6-12 small-3-4 flex direction-column gap">
                     <h2>Découvrez notre gamme @utdoor</h2>
                     <p>
                         Une sélection parmis les vêtements techniques de notre fabrication ainsi que des meilleures marques sur le marché
                     </p>
-                    <a class="button fit padding-button" href="" title="Voir les produits de la gamme @utdoor">Voir les articles de la gamme @utdoor</a>
+                    <a class="button fit padding-button" href="./liste-categories.html?rub=outdoor" title="Voir les produits de la gamme @utdoor">Voir les articles de la gamme @utdoor</a>
                 </div>
             </div>
         </section>
-        <div class="article-outdoor container-full margin-bottom-60px">
+        <div data-aos="fade-up" class="article-outdoor container-full margin-bottom-60px">
             <!-- Mise en avant d'un produit de la gamme outdoor -->
-            <article class="bg-black large-7-12 small-4-4 flex justify-between">
+            <article class="bg-black large-7-12 small-4-4 medium-8-8 flex justify-between">
                 <!-- Image du produit -->
-                <div class="large-5-12 small-4-4 reponsive">
+                <div class="large-5-12 small-4-4 medium-4-8 bg-white responsive flex justify-center
+                 align-center">
                     <img src="./public/images/images-site/outdoor6.jpg" alt="Photo du tee-shirt Rando+">
                 </div>
                 <!-- Description du produit -->
-                <div class="large-7-12 small-4-4 flex direction-column justify-between gap padding-20px">
+                <div class="large-7-12 small-4-4 medium-4-8 flex direction-column justify-between gap padding-20px">
                     <!-- Entête avec le libellé et le prix -->
                     <div class="flex justify-between">
                         <strong>Nouveauté</strong>
@@ -150,53 +174,61 @@
                             <li>Anti odeurs</li>
                         </ul>
                     </p>
-                    <a href="" title="Voir le détail du Teeshirt Rando+"> Voir le détail du produit</a>
+                    <a href="./detail-produit.html?id-produit=45896" title="Voir le détail du Teeshirt Rando+"> Voir le détail du produit</a>
                 </div>
             </article>
         </div>
         <!-- Section pour l'offre à mettre en avant -->
-        <section class="container-full flex justify-between align-center margin-bottom-100px">
+        <section class="container-full container-marges-smartphone container-marges-tablet flex direction-column-reverse-responsive justify-between align-center margin-bottom-100px">
             <!-- Description de l'offre -->
-            <div class="large-5-12 flex direction-column gap">
+            <div data-aos="fade-right" class="large-5-12 small-4-4 medium-8-8 flex direction-column gap">
                 <h2>Profitez de l'offre</h2>
                 <strong>L’ensembe jogging M’S noir disponible en plusieurs tailles</strong>
                 <p>
                     Ce jogging alie confort légereté et douceur, pour du sport a l’exterieur comme pour les moments de détente a la maison.
                 </p>
-                <a class="button fit padding-button" href="" title="Voir le détail du jogging M'S">Voir le détail du produit</a>
+                <a class="button fit padding-button" href="./detail-produit.html?id-produit=365896" title="Voir le détail du jogging M'S">Voir le détail du produit</a>
             </div>
             <!-- Image de l'offre -->
-            <div class="large-6-12">
+            <div data-aos="fade-left" class="large-6-12 small-4-4 medium-8-8">
                 <img src="./public/images/images-site/Joogin-promo.jpg" alt="Photo du jogging M'S noir">
             </div>
         </section>
         <!-- Section pour les marques mises en lumière -->
         <section class="bg-black">
-            <div class="container-full padding-top-30px padding-bottom-30px">
+            <div class="container-full container-marges-smartphone container-marges-tablet padding-top-30px padding-bottom-30px">
                 <h2 class="margin-bottom-20px">Ces marques nous font confiance</h2>
-                <div class="large-12-12 flex justify-around align-center">
-                    <div>
-                        <img src="./public/images/images-site/the-north-face.png" alt="Logo de la marque The North Face">
+                <div class="large-12-12 flex justify-around direction-column-responsive align-center">
+                    <div data-aos="flip-left">
+                        <a href="https://www.thenorthface.fr" title="Accès au site de The North Face">
+                            <img src="./public/images/images-site/the-north-face.png" alt="Logo de la marque The North Face">
+                        </a>
                     </div>
-                    <div>
-                        <img src="./public/images/images-site/puma.png" alt="Logo de la marque Puma">
+                    <div data-aos="flip-up">
+                        <a href="https://eu.puma.com" title="Accès au site de Puma">
+                            <img src="./public/images/images-site/puma.png" alt="Logo de la marque Puma">
+                        </a>
                     </div>
-                    <div>
-                        <img src="./public/images/images-site/adidas.png" alt="Logo de la marque Adidas">
+                    <div data-aos="flip-down">
+                        <a href="https://www.adidas.fr" title="Accès au site d'Adidas">
+                            <img src="./public/images/images-site/adidas.png" alt="Logo de la marque Adidas">
+                        </a>
                     </div>
-                    <div>
-                        <img src="./public/images/images-site/nike.png" alt="Logo de la marque Nike">
+                    <div data-aos="flip-right">
+                        <a href="https://www.nike.com" title="Accès au site de Nike">
+                            <img src="./public/images/images-site/nike.png" alt="Logo de la marque Nike">
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Section pour le formulaire de contact -->
-        <section class="container-full margin-bottom-100px margin-top-100px flex justify-around">
+        <section class="section-contact container-full margin-bottom-100px margin-top-100px flex direction-column-reverse-responsive justify-around gap">
             <!-- Image en lien avec la partie contact -->
-            <div class="large-6-12">
+            <div class="large-5-12 small-4-4 medium-8-8 responsive bg-black">
                 <img src="./public/images/images-site/illustration-boxe.jpg" alt="Photo d'un boxeur qui s'entraine contre un sac de frappe">
             </div>
-            <div class="large-6-12 flex direction-column gap">
+            <div class="large-6-12 small-4-4 medium-8-8 flex direction-column container-marges-smartphone container-marges-tablet  gap">
                 <h2>Contactez-nous</h2>
                 <p>
                     Pour des informations sur nos produits, pour toute demande de renseignement ou pour nous faire remonter un problème techique sur le site , merci de remplir le formulaire suivant
@@ -229,13 +261,27 @@
                         </select>
                         <p class="p-error"  id="error-objet"></p>
                     </div>
+                    <div class="large-12-12 d-none" id="div-reference">
+                        <label for="reference">Référence produit</label>
+                        <input type="text" name="reference" id="reference" placeholder="xxx-123456">
+                        <p class="p-error"  id="error-reference"></p>
+                    </div>
                     <div class="large-12-12">
-                        <label for="message">Votre message</label>
+                        <label for="message">Votre message (<span id="nb-caracteres-message">0</span>/500 caractères)</span></label>
                         <textarea name="message" id="message"></textarea>
                         <p class="p-error"  id="error-message"></p>
                     </div>
                     <input type="submit" value="Envoyer votre message">
                 </form>
+            </div>
+            <div class="modal d-none" id="modal">
+                <div class="modal-content large-5-12 medium-6-8 small-3-4 flex justify-center" id="modal-recap">
+                    Merci, votre demande a bien été prise en compte !<br>
+                    Nous nous engageons à vous répondre dans les meilleurs délais.
+                    <div class="modal-button large-5-12 flex justify-center">
+                        <div class="button-cta fit padding-button" id="btn-fermer">Fermer</div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -248,31 +294,30 @@
             </div>
             <strong>Retrouvez nos boutiques près de chez vous</strong>
             <!-- Partie réservée à la carte -->
-            <div class="large-7-12" id="map"></div>
+            <div class="large-7-12 small-4-4 medium-8-8" id="map"></div>
         </div>
         <!-- Section avec les colonnes du footer -->
-        <div class="container-full large-12-12 flex justify-around">
-            <div class="large-2-12 flex direction-column gap">
+        <div class="colonnes-footer container-full large-12-12 container-marges-smartphone container-marges-tablet flex justify-around">
+            <div class="large-2-12 small-4-4 medium-4-8 flex direction-column gap">
                 <h4>Plan du site</h4>
                 <nav>
                     <ul>
-                        <li><a href="" title="Accueil du site">Accueil</a></li>
-                        <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
-                        <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
-                        <li><a href="" title="Accès à la page des accessoires">Accessoirs</a></li>
-                        <li><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
-                        <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                        <li><a href="./index.html" title="Accueil du site">Accueil</a></li>
+                    <li><a href="./liste-categories.html?rub=chaussures" title="Accès à la page des chaussures">Chaussures</a></li>
+                    <li><a href="./liste-categories.html?rub=vetements" title="Accès à la page des vêtements">Vêtements</a></li>
+                    <li><a href="./liste-categories.html?rub=accessoires" title="Accès à la page des accessoires">Accessoires</a></li>
+                    <li><a href="./liste-categories.html?rub=outdoor" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="large-4-12 flex direction-column gap">
+            <div class="large-4-12 small-4-4 medium-4-8 flex direction-column gap">
                 <h4>Horaires d'ouverture de nos boutiques</h4>
                 <p>
                     Du  lundi au vendredi de 10h à 12h30 puis de<br> 13h30 a 19h<br>
                     Le samedi de 9h a 18h30 non stop
                 </p>
             </div>
-            <div class="large-4-12 flex direction-column gap">
+            <div class="large-4-12 small-4-4 medium-8-8 flex direction-column gap">
                 <h4>Retrouvez nous sur les réseaux sociaux</h4>
                 <nav>
                     <ul class="flex gap">
@@ -292,12 +337,17 @@
                 </nav>
             </div>
         </div>
+        <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
+            <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
+        </div>
     </footer>
     
     <!-- Script des biliothèques si nécessaires -->
     <script src="./public/js/library/leaflet/leaflet.js"></script>
+    <script src="./public/js/library/aos-master/dist/aos.js"></script>
     <!-- Script global de l'application -->
     <script src="./public/js/app.js"></script>
     <!-- Scripts spécifiques à la page -->
+    <script src="./public/js/accueil.js"></script>
 </body>
 </html>

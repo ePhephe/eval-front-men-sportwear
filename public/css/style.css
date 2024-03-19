@@ -182,6 +182,16 @@ les resolutions d'ecrans*/
   padding-right: var(--marginDesktop);
 }
 
+/*Petit écran de PC*/
+@media all and (min-width: 820px) and (max-width: 1200px) {
+  /*Container Tablet*/
+  .container-full {
+    max-width: 1024px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /*Tablets*/
 @media all and (min-width: 500px) and (max-width: 1024px) {
   .medium-1-8 {
@@ -210,11 +220,14 @@ les resolutions d'ecrans*/
   }
   /*Container Tablet*/
   .container-full {
-    max-width: 1024px;
+    max-width: 820px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
+}
+/*Tablets*/
+@media all and (min-width: 500px) and (max-width: 820px) {
   .container-marges-tablet {
     padding-left: var(--marginTablet);
     padding-right: var(--marginTablet);
@@ -601,12 +614,20 @@ les resolutions d'ecrans*/
   gap: var(--gouttiere);
 }
 
+@media all and (max-width: 820px) {
+  .direction-column-reverse-responsive {
+    flex-direction: column-reverse;
+  }
+  .direction-column-responsive {
+    flex-direction: column;
+  }
+}
 /* Menu Burger masqué normalement */
 .menu-burger {
   display: none;
   /* Affichage en mode smartphone */
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .menu-burger {
     width: 36px;
     height: 36px;
@@ -616,8 +637,8 @@ les resolutions d'ecrans*/
     align-content: space-around;
     padding: 5px;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 17px;
+    right: 46px;
     z-index: 11;
   }
   .menu-burger > span {
@@ -629,7 +650,7 @@ les resolutions d'ecrans*/
 }
 
 /* Croix du menu Burger masqué normalement */
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .menu-burger-close > span {
     position: absolute;
     transition: transform 400ms linear;
@@ -654,7 +675,7 @@ les resolutions d'ecrans*/
   display: none;
   /* Affichage en mode smartphone */
 }
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .navigation-burger {
     width: 100%;
     height: 100vh;
@@ -671,13 +692,13 @@ les resolutions d'ecrans*/
 }
 
 /* Transformation pour l'affichage du header en smartphone */
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .navigation-burger-affiche {
     transform: translateX(0%);
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .navigation-classique {
     display: none;
   }
@@ -689,7 +710,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h2 {
@@ -706,7 +727,8 @@ a {
   text-decoration: none;
 }
 
-.reponsive img {
+.responsive img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -716,10 +738,16 @@ a {
   color: var(--fourthColor);
 }
 
+.bg-white {
+  background-color: var(--fourthColor);
+  color: var(--firstColor);
+}
+
 .button-cta {
   background-color: var(--secondColor);
   color: var(--fourthColor);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .button {
@@ -728,10 +756,25 @@ a {
   font-weight: 700;
   border: 2px solid var(--firstColor);
   padding: 12px 0;
+  cursor: pointer;
 }
 
 .padding-button {
   padding: var(--paddingButton);
+}
+
+.d-none {
+  display: none;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.p-error {
+  color: red;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 
 /* Règles sur le Header */
@@ -743,7 +786,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
 }
 
 header nav li.en-avant {
@@ -765,6 +808,11 @@ header nav li:hover {
   height: 420px;
 }
 
+.mentions-legales a {
+  color: var(--secondColor);
+  margin-right: 8px;
+}
+
 /* Règles sur la page d'accueil */
 /* Mise en forme du Hero */
 .hero {
@@ -778,6 +826,10 @@ header nav li:hover {
 .hero .accroche {
   gap: 32px;
   transform: translateX(-25%);
+}
+
+.hero .accroche h2 {
+  font-size: 2rem;
 }
 
 .hero .accroche p {
@@ -794,6 +846,11 @@ header nav li:hover {
   text-align: center;
   padding-top: 4px;
   padding-bottom: 4px;
+}
+
+/* Section avec H1 et présentation */
+.description-entreprise p {
+  line-height: 1.5;
 }
 
 /* Section pour la gamme outdoor */
@@ -823,7 +880,7 @@ header nav li:hover {
 }
 
 .prix {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--secondColor);
 }
@@ -863,6 +920,35 @@ header nav li:hover {
   padding: var(--paddingButton);
   width: -moz-fit-content;
   width: fit-content;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: var(--firstColor);
+  color: var(--fourthColor);
+  border-radius: 20px;
+  margin: 15% auto 0 auto;
+  padding: 50px 10%;
+  border: 1px solid var(--fourthColor);
+  width: 50%;
+  height: 200px;
+  position: relative;
+}
+
+.modal-button {
+  position: absolute;
+  bottom: -20px;
 }
 
 /* Règles sur la page de liste des produits */
@@ -888,11 +974,21 @@ header nav li:hover {
 
 /* Formulaire de filtre des produits */
 #filtre-produit #prix-mini, #prix-maxi {
-  width: 100px;
+  width: 100%;
 }
 
 #filtre-produit #search {
-  width: 30%;
+  width: 100%;
+}
+
+#filtre-produit input {
+  margin-top: 10px;
+  padding: 8px;
+}
+
+#filtre-produit select {
+  margin-top: 10px;
+  padding: 8px;
 }
 
 /* Mise en forme de la liste des produits */
@@ -900,7 +996,15 @@ header nav li:hover {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.33);
 }
 
+.liste-produits article .prix {
+  font-size: 1.3rem;
+}
+
 /* Règles sur la page de détail d'un produit */
+.swiper-button-prev, .swiper-button-next {
+  color: var(--secondColor);
+}
+
 .detail-produit h1 {
   width: 90;
 }
@@ -932,7 +1036,7 @@ header nav li:hover {
   background-color: #911CED;
 }
 
-.couleur-orange {
+.couleur-rouge {
   background-color: #EB3535;
 }
 
@@ -951,7 +1055,7 @@ header nav li:hover {
   font-family: var(--fontTitre);
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 1024px) {
   .hero {
     display: none;
   }
@@ -962,33 +1066,31 @@ header nav li:hover {
     background-size: cover;
     background-position: center;
     height: auto;
+    padding-top: 30px;
+    padding-bottom: 60px;
   }
   .outdoor-accroche {
     transform: none;
   }
   .article-outdoor {
+    margin-top: 40px;
+  }
+  .colonnes-footer > div {
+    margin-bottom: 40px;
+  }
+}
+@media all and (max-width: 820px) {
+  .article-outdoor {
     margin-top: 0;
   }
-  .article-outdoor article {
-    border: 1px solid var(--firstColor);
+  .section-contact {
+    margin-bottom: 0;
   }
-  .article-outdoor article strong {
-    text-transform: uppercase;
-    font-size: 1.375rem;
+  .fil-ariane {
+    margin-top: 0;
   }
-  .prix {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--secondColor);
-  }
-  .article-outdoor article ul {
-    list-style: disc;
-    list-style-position: inside;
-  }
-  .article-outdoor article a {
-    color: var(--secondColor);
-    font-weight: 700;
-    text-align: center;
+  .description-produit {
+    margin-top: 50px;
   }
 }
 

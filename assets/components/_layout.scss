@@ -49,8 +49,19 @@ les resolutions d'ecrans*/
   padding-right: var(--marginDesktop);
 }
 
+/*Petit écran de PC*/
+@media all and (min-width : $widthTablet) and (max-width : $widthDesktop) {
+  /*Container Tablet*/
+  .container-full {
+    max-width: $widthMinDesktop;
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+@media all and (min-width : $widthSmartphone) and (max-width : $widthMinDesktop) {
   .medium {
     @include largeur-modifier($numberColumnTablet);
   }
@@ -62,6 +73,10 @@ les resolutions d'ecrans*/
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+/*Tablets*/
+@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
 
   .container-marges-tablet {
     padding-left: var(--marginTablet);

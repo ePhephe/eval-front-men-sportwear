@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Référencement - Titre et meta description de la page -->
-    <title>Document</title>
+    <title>Libellé du produit</title>
     <meta name="description" content="">
     <!-- Fichiers style des librairies utilisées si nécessaire -->
     <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="./public/js/library/aos-master/dist/aos.css">
+    <link rel="stylesheet" href="./public/js/library/swiper/swiper-bundle.min.css" />
     <!-- Style CSS global -->
     <link rel="stylesheet" href="./public/css/style.css">
     <!-- Mise en place du favicon -->
@@ -18,7 +20,7 @@
 </head>
 <body>
     <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
-    <header class="bg-black">
+    <header class="bg-black large-12-12 container-marges-smartphone">
         <div class="container-full flex justify-between">
             <!-- Logo de la marque avec un lien sur l'accueil -->
             <div>
@@ -27,41 +29,96 @@
                 </a>
             </div>
             <!-- Menu de navigation (masqué en responsive) -->
-            <nav class="flex align-center">
+            <nav class="flex align-center navigation-classique">
                 <ul class="flex align-center gap">
-                    <li><a href="" title="Accueil du site">Accueil</a></li>
-                    <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
-                    <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
-                    <li><a href="" title="Accès à la page des accessoires">Accessoires</a></li>
-                    <li class="en-avant padding-button"><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
-                    <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                    <li><a href="./index.html" title="Accueil du site">Accueil</a></li>
+                    <li><a href="./liste-categories.html?rub=chaussures" title="Accès à la page des chaussures">Chaussures</a></li>
+                    <li><a href="./liste-categories.html?rub=vetements" title="Accès à la page des vêtements">Vêtements</a></li>
+                    <li><a href="./liste-categories.html?rub=accessoires" title="Accès à la page des accessoires">Accessoires</a></li>
+                    <li class="en-avant padding-button"><a href="./liste-categories.html?rub=outdoor" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
                 </ul>
             </nav>
             <!-- Accès au panier et au compte, masqué en responsive -->
-            <div class="flex align-center gap">
+            <div class="flex align-center gap navigation-classique">
                 <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
                 <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
             </div>
+            <div class="menu-burger" id="menuBurger">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+            </div>
+            <div class="navigation-burger flex direction-column align-center" id="navigationBurger">
+                <nav class="flex align-center margin-top-50px margin-bottom-30px">
+                    <ul class="flex align-center direction-column gap">
+                        <li><a href="./index.html" title="Accueil du site">Accueil</a></li>
+                        <li><a href="./liste-categories.html?rub=chaussures" title="Accès à la page des chaussures">Chaussures</a></li>
+                        <li><a href="./liste-categories.html?rub=vetements" title="Accès à la page des vêtements">Vêtements</a></li>
+                        <li><a href="./liste-categories.html?rub=accessoires" title="Accès à la page des accessoires">Accessoires</a></li>
+                        <li class="en-avant padding-button"><a href="./liste-categories.html?rub=outdoor" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
+                    </ul>
+                </nav>
+                <div class="flex gap">
+                    <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
+                    <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+                </div>
+            </div>
         </div>
     </header>
+    <!-- On compense la position fixe du header -->
+    <div class="vide-header">
+    </div>
     <!-- Main pour le contenu de la page -->
     <main class="container-full">
-        <div class="fil-ariane margin-top-30px margin-bottom-30px flex">
+        <div class="fil-ariane margin-top-30px margin-bottom-30px flex direction-column-responsive">
             <div class="categorie">
-                Chaussures >
+                <a href="" title="Accès à la catégorie des chaussures">Chaussures</a> >
             </div>
             <div class="sous-categorie">
-                Baskets >
+                <a href="./liste-produits.html" title="Accès à la catégorie des baskets">Baskets</a> >
             </div>
             <div class="produit">
                 Libelle du produit
             </div>
         </div>
-        <section class="detail-produit large-12-12 flex justify-between margin-bottom-100px">
-            <div class="large-5-12">
-                <img src="./public/images/details-produit/basket2-bleu.png" alt="Photo de la basket en bleu">
+        <section class="detail-produit large-12-12 flex justify-between margin-bottom-100px container-marges-smartphone container-marges-tablet">
+            <div class="large-5-12 small-4-4 medium-8-8">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-bleu.png" alt="Photo de la basket en bleu">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-violet.png" alt="Photo de la basket en violet">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-rouge.png" alt="Photo de la basket en rouge">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-vert.png" alt="Photo de la basket en vert">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper mySwiper" thumbsSlider="">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-bleu.png" alt="Photo de la basket en bleu">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-violet.png" alt="Photo de la basket en violet">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-rouge.png" alt="Photo de la basket en rouge">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./public/images/details-produit/basket2-vert.png" alt="Photo de la basket en vert">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="large-6-12 flex direction-column gap">
+            <div class="description-produit large-6-12 medium-8-8 small-4-4 flex direction-column gap">
                 <div class="flex justify-between">
                     <h1 class="large-9-12">Libellé du produit</h1>
                     <span class="prix">149 €</span>
@@ -77,11 +134,11 @@
                 </p>
                 <div class="flex justify-between">
                     <span>Couleurs disponibles</span>
-                    <div class="flex gap">
-                        <a href="" title=""><div class="pastille-couleur couleur-bleu"></div></a>
-                        <a href="" title=""><div class="pastille-couleur couleur-violet"></div></a>
-                        <a href="" title=""><div class="pastille-couleur couleur-orange"></div></a>
-                        <a href="" title=""><div class="pastille-couleur couleur-vert"></div></a>
+                    <div class="flex gap" id="choix-couleur">
+                        <a href="" title="Choisir la couleur bleu"><div class="pastille-couleur couleur-bleu"></div></a>
+                        <a href="" title="Choisir la couleur violet"><div class="pastille-couleur couleur-violet"></div></a>
+                        <a href="" title="Choisir la couleur rouge"><div class="pastille-couleur couleur-rouge"></div></a>
+                        <a href="" title="Choisir la couleur vert"><div class="pastille-couleur couleur-vert"></div></a>
                     </div>
                 </div>
                 <div class="flex justify-between">
@@ -102,7 +159,7 @@
             </div>
         </section>
         <!-- Section pour les avis client -->
-        <section class="margin-bottom-100px flex gap">
+        <section class="margin-bottom-100px flex gap container-marges-smartphone container-marges-tablet">
             <h2 class="margin-bottom-30px">Avis des consommateurs</h2>
             <article class="flex align-center">
                 <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
@@ -157,31 +214,30 @@
             </div>
             <strong>Retrouvez nos boutiques près de chez vous</strong>
             <!-- Partie réservée à la carte -->
-            <div class="large-7-12" id="map"></div>
+            <div class="large-7-12 small-4-4 medium-8-8" id="map"></div>
         </div>
         <!-- Section avec les colonnes du footer -->
-        <div class="container-full large-12-12 flex justify-around">
-            <div class="large-2-12 flex direction-column gap">
+        <div class="colonnes-footer container-full large-12-12 container-marges-smartphone container-marges-tablet flex justify-around">
+            <div class="large-2-12 small-4-4 medium-4-8 flex direction-column gap">
                 <h4>Plan du site</h4>
                 <nav>
                     <ul>
-                        <li><a href="" title="Accueil du site">Accueil</a></li>
-                        <li><a href="" title="Accès à la page des chaussures">Chaussures</a></li>
-                        <li><a href="" title="Accès à la page des vêtements">Vêtements</a></li>
-                        <li><a href="" title="Accès à la page des accessoires">Accessoirs</a></li>
-                        <li><a href="" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
-                        <li><a href="" title="Accès à la partie contact">Contact</a></li>
+                        <li><a href="./index.html" title="Accueil du site">Accueil</a></li>
+                    <li><a href="./liste-categories.html?rub=chaussures" title="Accès à la page des chaussures">Chaussures</a></li>
+                    <li><a href="./liste-categories.html?rub=vetements" title="Accès à la page des vêtements">Vêtements</a></li>
+                    <li><a href="./liste-categories.html?rub=accessoires" title="Accès à la page des accessoires">Accessoires</a></li>
+                    <li><a href="./liste-categories.html?rub=outdoor" title="Accès à la page de la gamme outdoor">@utdoor</a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="large-4-12 flex direction-column gap">
+            <div class="large-4-12 small-4-4 medium-4-8 flex direction-column gap">
                 <h4>Horaires d'ouverture de nos boutiques</h4>
                 <p>
                     Du  lundi au vendredi de 10h à 12h30 puis de<br> 13h30 a 19h<br>
                     Le samedi de 9h a 18h30 non stop
                 </p>
             </div>
-            <div class="large-4-12 flex direction-column gap">
+            <div class="large-4-12 small-4-4 medium-8-8 flex direction-column gap">
                 <h4>Retrouvez nous sur les réseaux sociaux</h4>
                 <nav>
                     <ul class="flex gap">
@@ -201,12 +257,18 @@
                 </nav>
             </div>
         </div>
+        <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
+            <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
+        </div>
     </footer>
     
     <!-- Script des biliothèques si nécessaires -->
     <script src="./public/js/library/leaflet/leaflet.js"></script>
+    <script src="./public/js/library/aos-master/dist/aos.js"></script>
+    <script src="./public/js/library/swiper/swiper-bundle.min.js"></script>
     <!-- Script global de l'application -->
     <script src="./public/js/app.js"></script>
     <!-- Scripts spécifiques à la page -->
+    <script src="./public/js/detailProduit.js"></script>
 </body>
 </html>
