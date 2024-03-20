@@ -44,7 +44,11 @@ $numberColumnTablet: 8;
 $numberColumnSmartphone: 4;
 
 $widthFull: 100%;
-$widthDesktop: 1200px;
-$widthMinDesktop: 1024px;
-$widthTablet: 820px;
-$widthSmartphone: 500px;
+
+$widthContainer1200: 1200px;
+$maxWidthLarge: 1280px;
+$widthContainer1000: 1024px;
+$maxWidthMedium: 1080px;
+$widthContainer800: 800px;
+$maxWidthSmall: 500px;
+$widthContainer400: 350px;

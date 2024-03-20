@@ -1,10 +1,11 @@
 @use "sass:map";
 
+/* Fonction de calcul des largeurs en fonction des colonnes et de la gouttière */
 @function large($numberColumn, $i) {
   @return calc((100% / ($numberColumn / $i)) - ((($numberColumn / $i) - 1) * var(--gouttiere)) / ($numberColumn / $i));
 }
 
-
+/* Mixin pour généré les différentes width */
 @mixin largeur-modifier($numberColumn) {
   @for $i from 1 to $numberColumn+1 {
     &-#{$i}-#{$numberColumn} {
@@ -13,8 +14,7 @@
   }
 }
 
-/*Generation des classes pour la largeur des colonnes selon 
-les resolutions d'ecrans*/
+/* Une classe full et une fit pour de la mise en page*/
 .full {
   width: $widthFull;
 }
@@ -23,60 +23,17 @@ les resolutions d'ecrans*/
   width: -moz-fit-content;
   width: fit-content;
 }
-/*Desktop*/
+
+/* Format Large*/
 .large {
   @include largeur-modifier($numberColumnDesktop);
 }
 
-/*Container Desktop*/
-.container-full {
-  max-width: $widthDesktop;
-  width:100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container-marges-desktop {
-  padding-left: var(--marginDesktop);
-  padding-right: var(--marginDesktop);
-}
-
-.container-marges-left-desktop {
-  padding-left: var(--marginDesktop);
-}
-
-.container-marges-right-desktop {
-  padding-right: var(--marginDesktop);
-}
-
-/*Petit écran de PC*/
-@media all and (min-width : $widthTablet) and (max-width : $widthDesktop) {
-  /*Container Tablet*/
-  .container-full {
-    max-width: $widthMinDesktop;
-    width:100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthMinDesktop) {
+/* Format Medium */
+@media all and (min-width : $maxWidthSmall) and (max-width : $maxWidthMedium) {
   .medium {
     @include largeur-modifier($numberColumnTablet);
   }
-
-  /*Container Tablet*/
-  .container-full {
-    max-width: $widthTablet;
-    width:100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
 
   .container-marges-tablet {
     padding-left: var(--marginTablet);
@@ -92,18 +49,10 @@ les resolutions d'ecrans*/
   }
 }
 
-/*Smartphones*/
-@media all and (max-width : $widthSmartphone) {
+/* Format Small */
+@media all and (max-width : $maxWidthSmall) {
   .small {
     @include largeur-modifier($numberColumnSmartphone);
-  }
-
-  /*Container Smartphone*/
-  .container-full {
-    max-width: $widthSmartphone;
-    width:100%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .container-marges-smartphone {
@@ -116,11 +65,29 @@ les resolutions d'ecrans*/
   }
 
   .container-marges-right-smartphone {
-    padding-right: var(--marginSmartphone);
+    padding-left: var(--marginSmartphone);
+  }
+}
+
+/* Container */
+.container-full {
+  max-width: $widthContainer1200;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  @media all and (max-width : $maxWidthLarge) {
+    max-width: $widthContainer1000;
+  }
+  @media all and (max-width : $maxWidthMedium) {
+    max-width: $widthContainer800;
+  }
+  @media all and (max-width : $maxWidthSmall) {
+    max-width: $widthContainer400;
   }
 }
 
 /************* Marges et Paddings Génériques **************/
+/* Tableau de définition pour la génération */
 $cote: (
   1: "-top",
   2: "-bottom",
@@ -129,12 +96,12 @@ $cote: (
   5: ""
 );
 
-/* On génère des marges multiples de 10 */
+/* Fonction de génération de marges/padding par multiple de 10 */
 @function marges($i) {
   @return calc($i*10px);
 }
 
-/* Génération des margins */
+/* Mixin pour généré les différentes marges */
 @mixin marges-generiques() {
   @for $j from 1 to 6 {
     @for $i from 1 to 11 {
@@ -145,7 +112,7 @@ $cote: (
   }
 }
 
-/* Génération des paddings */
+/* Mixin pour généré les différents padding */
 @mixin padding-generiques() {
   @for $j from 1 to 6 {
     @for $i from 1 to 11 {
@@ -156,10 +123,11 @@ $cote: (
   }
 }
 
+/* Génération des marges */
 .margin {
   @include marges-generiques();
 }
-
+/* Génération des padding */
 .padding {
   @include padding-generiques();
 }

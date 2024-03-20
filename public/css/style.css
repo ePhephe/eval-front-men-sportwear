@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/********** Import des fichiers de base ***********/
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
@@ -106,8 +107,10 @@ th {
 }
 
 /* Variables SCSS */
-/*Generation des classes pour la largeur des colonnes selon 
-les resolutions d'ecrans*/
+/********** Import des composants ***********/
+/* Fonction de calcul des largeurs en fonction des colonnes et de la gouttière */
+/* Mixin pour généré les différentes width */
+/* Une classe full et une fit pour de la mise en page*/
 .full {
   width: 100%;
 }
@@ -117,7 +120,7 @@ les resolutions d'ecrans*/
   width: fit-content;
 }
 
-/*Desktop*/
+/* Format Large*/
 .large-1-12 {
   width: calc(8.3333333333% - 11 * var(--gouttiere) / 12);
 }
@@ -155,39 +158,8 @@ les resolutions d'ecrans*/
   width: calc(100% - 0 * var(--gouttiere) / 1);
 }
 
-/*Container Desktop*/
-.container-full {
-  max-width: 1200px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container-marges-desktop {
-  padding-left: var(--marginDesktop);
-  padding-right: var(--marginDesktop);
-}
-
-.container-marges-left-desktop {
-  padding-left: var(--marginDesktop);
-}
-
-.container-marges-right-desktop {
-  padding-right: var(--marginDesktop);
-}
-
-/*Petit écran de PC*/
-@media all and (min-width: 820px) and (max-width: 1200px) {
-  /*Container Tablet*/
-  .container-full {
-    max-width: 1024px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-/*Tablets*/
-@media all and (min-width: 500px) and (max-width: 1024px) {
+/* Format Medium */
+@media all and (min-width: 500px) and (max-width: 1080px) {
   .medium-1-8 {
     width: calc(12.5% - 7 * var(--gouttiere) / 8);
   }
@@ -212,16 +184,6 @@ les resolutions d'ecrans*/
   .medium-8-8 {
     width: calc(100% - 0 * var(--gouttiere) / 1);
   }
-  /*Container Tablet*/
-  .container-full {
-    max-width: 820px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-/*Tablets*/
-@media all and (min-width: 500px) and (max-width: 820px) {
   .container-marges-tablet {
     padding-left: var(--marginTablet);
     padding-right: var(--marginTablet);
@@ -233,7 +195,7 @@ les resolutions d'ecrans*/
     padding-right: var(--marginTablet);
   }
 }
-/*Smartphones*/
+/* Format Small */
 @media all and (max-width: 500px) {
   .small-1-4 {
     width: calc(25% - 3 * var(--gouttiere) / 4);
@@ -247,13 +209,6 @@ les resolutions d'ecrans*/
   .small-4-4 {
     width: calc(100% - 0 * var(--gouttiere) / 1);
   }
-  /*Container Smartphone*/
-  .container-full {
-    max-width: 500px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .container-marges-smartphone {
     padding-left: var(--marginSmartphone);
     padding-right: var(--marginSmartphone);
@@ -262,13 +217,38 @@ les resolutions d'ecrans*/
     padding-left: var(--marginSmartphone);
   }
   .container-marges-right-smartphone {
-    padding-right: var(--marginSmartphone);
+    padding-left: var(--marginSmartphone);
   }
 }
+/* Container */
+.container-full {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media all and (max-width: 1280px) {
+  .container-full {
+    max-width: 1024px;
+  }
+}
+@media all and (max-width: 1080px) {
+  .container-full {
+    max-width: 800px;
+  }
+}
+@media all and (max-width: 500px) {
+  .container-full {
+    max-width: 350px;
+  }
+}
+
 /************* Marges et Paddings Génériques **************/
-/* On génère des marges multiples de 10 */
-/* Génération des margins */
-/* Génération des paddings */
+/* Tableau de définition pour la génération */
+/* Fonction de génération de marges/padding par multiple de 10 */
+/* Mixin pour généré les différentes marges */
+/* Mixin pour généré les différents padding */
+/* Génération des marges */
 .margin-top-10px {
   margin-top: 10px;
 }
@@ -420,6 +400,7 @@ les resolutions d'ecrans*/
   margin: 100px;
 }
 
+/* Génération des padding */
 .padding-top-10px {
   padding-top: 10px;
 }
@@ -571,6 +552,7 @@ les resolutions d'ecrans*/
   padding: 100px;
 }
 
+/* Classes pour les flexbox */
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -608,7 +590,8 @@ les resolutions d'ecrans*/
   gap: var(--gouttiere);
 }
 
-@media all and (max-width: 1024px) {
+/* Classes spécifiques pour de la mise en page en format medium/small */
+@media all and (max-width: 1080px) {
   .direction-column-reverse-responsive {
     flex-direction: column-reverse;
   }
@@ -619,9 +602,9 @@ les resolutions d'ecrans*/
 /* Menu Burger masqué normalement */
 .menu-burger {
   display: none;
-  /* Affichage en mode smartphone */
+  /* Affichage en mode medium/large */
 }
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1080px) {
   .menu-burger {
     width: 36px;
     height: 36px;
@@ -631,8 +614,8 @@ les resolutions d'ecrans*/
     align-content: space-around;
     padding: 5px;
     position: fixed;
-    top: 17px;
-    right: 46px;
+    top: 16px;
+    right: 16px;
     z-index: 11;
   }
   .menu-burger > span {
@@ -644,7 +627,7 @@ les resolutions d'ecrans*/
 }
 
 /* Croix du menu Burger masqué normalement */
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1080px) {
   .menu-burger-close > span {
     position: absolute;
     transition: transform 400ms linear;
@@ -664,12 +647,12 @@ les resolutions d'ecrans*/
   }
 }
 
-/* Menu Burger masqué normalement */
+/* Navigation Menu Burger masqué normalement */
 .navigation-burger {
   display: none;
   /* Affichage en mode smartphone */
 }
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1080px) {
   .navigation-burger {
     width: 100%;
     height: 100vh;
@@ -686,19 +669,19 @@ les resolutions d'ecrans*/
 }
 
 /* Transformation pour l'affichage du header en smartphone */
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1080px) {
   .navigation-burger-affiche {
     transform: translateX(0%);
   }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1080px) {
   .navigation-classique {
     display: none;
   }
 }
 
-/* Règles Générales */
+/********** Règles Générales ***********/
 h1, h2, h3, h4 {
   font-family: var(--fontTitre);
 }
@@ -721,12 +704,14 @@ a {
   text-decoration: none;
 }
 
+/* Pour les images responsives */
 .responsive {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Différents fonds */
 .bg-black {
   background-color: var(--firstColor);
   color: var(--fourthColor);
@@ -737,6 +722,7 @@ a {
   color: var(--firstColor);
 }
 
+/* Différents style de boutons */
 .button-cta {
   background-color: var(--secondColor);
   color: var(--fourthColor);
@@ -757,16 +743,18 @@ a {
   padding: var(--paddingButton);
 }
 
+/* Classe générique display none */
 .d-none {
   display: none;
 }
 
+/* Classe pour gérer les erreurs des formulaires */
 .input-error {
-  border: 1px solid red;
+  border: 1px solid var(--errorColor);
 }
 
 .p-error {
-  color: red;
+  color: var(--errorColor);
   font-size: 0.8rem;
   font-style: italic;
 }
@@ -782,16 +770,15 @@ header {
   left: 0;
   z-index: 10;
 }
-
 header nav li.en-avant {
   border: 1px solid var(--fourthColor);
 }
-
 header nav li:hover {
   font-weight: 700;
   color: var(--fifthColor);
 }
 
+/* Classe pour la div qui compense la hauteur du header fixé */
 .vide-header {
   height: 80px;
   width: 100%;
@@ -807,27 +794,49 @@ header nav li:hover {
   margin-right: 8px;
 }
 
-/* Règles sur la page d'accueil */
+/* Règles sur les fils d'ariane */
+.fil-ariane {
+  font-weight: 700;
+}
+.fil-ariane > * {
+  padding: 5px 16px;
+}
+.fil-ariane .categorie {
+  background-color: var(--firstColor);
+  color: var(--fourthColor);
+}
+.fil-ariane .sous-categorie {
+  background-color: var(--thirdColor);
+  color: var(--firstColor);
+}
+.fil-ariane .produit {
+  background-color: var(--secondColor);
+  color: var(--fourthColor);
+}
+
+/********** Règles sur la page d'accueil ***********
 /* Mise en forme du Hero */
 .hero {
   height: calc(70vh - 80px);
-  background-image: url("../images/images-site/banniere-running.jpg");
+  background-image: url("../images/images-site/homme-running-outdoor.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
 .hero .accroche {
   gap: 32px;
   transform: translateX(-25%);
 }
-
 .hero .accroche h2 {
   font-size: 2rem;
 }
-
 .hero .accroche p {
   font-size: 1.375rem;
+}
+@media all and (max-width: 1080px) {
+  .hero {
+    display: none;
+  }
 }
 
 /* Section des catégories */
@@ -841,6 +850,11 @@ header nav li:hover {
   padding-top: 4px;
   padding-bottom: 4px;
 }
+@media all and (max-width: 1080px) {
+  .categories {
+    justify-content: space-around;
+  }
+}
 
 /* Section avec H1 et présentation */
 .description-entreprise p {
@@ -849,45 +863,60 @@ header nav li:hover {
 
 /* Section pour la gamme outdoor */
 .gamme-outdoor {
-  background-image: url("../images/images-site/accueil-bg-outdoor.jpg");
+  background-image: url("../images/images-site/homme-randonnee-montagne.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 80vh;
 }
+@media all and (max-width: 1080px) {
+  .gamme-outdoor {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
 
 .outdoor-accroche {
   transform: translateY(100%);
+}
+@media all and (max-width: 1080px) {
+  .outdoor-accroche {
+    transform: none;
+  }
 }
 
 .article-outdoor {
   margin-top: -220px;
 }
-
 .article-outdoor article {
   border: 1px solid var(--firstColor);
 }
-
-.article-outdoor article strong {
+.article-outdoor article h3 {
   text-transform: uppercase;
   font-size: 1.375rem;
+  font-family: var(--fontTexte);
+}
+.article-outdoor article ul {
+  list-style: disc;
+  list-style-position: inside;
+}
+.article-outdoor article a {
+  color: var(--secondColor);
+  font-weight: 700;
+  text-align: center;
+}
+@media all and (max-width: 1080px) {
+  .article-outdoor {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }
 
 .prix {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--secondColor);
-}
-
-.article-outdoor article ul {
-  list-style: disc;
-  list-style-position: inside;
-}
-
-.article-outdoor article a {
-  color: var(--secondColor);
-  font-weight: 700;
-  text-align: center;
 }
 
 /* Section pour le formulaire de contact */
@@ -897,16 +926,13 @@ header nav li:hover {
   display: inline-block;
   margin-bottom: 8px;
 }
-
-#form-contact input, select, textarea {
+#form-contact input, #form-contact select, #form-contact textarea {
   width: 100%;
   padding: 4px 8px;
 }
-
 #form-contact textarea {
   height: 100px;
 }
-
 #form-contact input[type=submit] {
   background-color: var(--secondColor);
   color: var(--fourthColor);
@@ -917,6 +943,7 @@ header nav li:hover {
   cursor: pointer;
 }
 
+/* Affichage d'une modal pour confirmer la réception du message */
 .modal {
   position: fixed;
   z-index: 1;
@@ -945,41 +972,14 @@ header nav li:hover {
   bottom: -20px;
 }
 
-/* Règles sur la page de liste des produits */
+/********** Règles sur la page de liste des produits **********/
 /* Mise en forme du fil d'ariane */
-.fil-ariane {
-  font-weight: 700;
-}
-.fil-ariane > * {
-  padding: 5px 16px;
-}
-.fil-ariane .categorie {
-  background-color: var(--firstColor);
-  color: var(--fourthColor);
-}
-.fil-ariane .sous-categorie {
-  background-color: var(--thirdColor);
-  color: var(--firstColor);
-}
-.fil-ariane .produit {
-  background-color: var(--secondColor);
-  color: var(--fourthColor);
-}
-
 /* Formulaire de filtre des produits */
-#filtre-produit #prix-mini, #prix-maxi {
-  width: 100%;
-}
-
-#filtre-produit #search {
-  width: 100%;
-}
-
 #filtre-produit input {
+  width: 100%;
   margin-top: 10px;
   padding: 8px;
 }
-
 #filtre-produit select {
   margin-top: 10px;
   padding: 8px;
@@ -989,12 +989,11 @@ header nav li:hover {
 .liste-produits article {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.33);
 }
-
 .liste-produits article .prix {
   font-size: 1.3rem;
 }
 
-/* Règles sur la page de détail d'un produit */
+/********** Règles sur la page de détail d'un produit **********/
 .swiper-button-prev, .swiper-button-next {
   color: var(--secondColor);
 }
@@ -1002,16 +1001,13 @@ header nav li:hover {
 .detail-produit h1 {
   width: 90;
 }
-
 .detail-produit ul {
   list-style: disc;
   list-style-position: inside;
 }
-
 .detail-produit span {
   font-weight: 700;
 }
-
 .detail-produit label {
   font-weight: 700;
 }
@@ -1038,6 +1034,7 @@ header nav li:hover {
   background-color: #1BC92C;
 }
 
+/* Mise en forme des avis */
 .image-avis {
   width: 56px;
   height: 56px;
@@ -1049,40 +1046,18 @@ header nav li:hover {
   font-family: var(--fontTitre);
 }
 
-@media all and (max-width: 1024px) {
-  .hero {
-    display: none;
-  }
-  .categories {
-    justify-content: space-around;
-  }
-  /* Section pour la gamme outdoor */
-  .gamme-outdoor {
-    background-image: url("../images/images-site/accueil-bg-outdoor.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: auto;
-    padding-top: 30px;
-    padding-bottom: 60px;
-  }
-  .outdoor-accroche {
-    transform: none;
-  }
-  .article-outdoor {
-    margin-top: 0;
-    margin-left: 0;
-  }
+/* Règles spécifiques qui n'ont pas de définition en mode classique large */
+@media all and (max-width: 1080px) {
   .colonnes-footer > div {
     margin-bottom: 40px;
   }
 }
-@media all and (max-width: 820px) {
-  .article-outdoor {
-    margin-top: 0;
-  }
+@media all and (max-width: 800px) {
   .section-contact {
+    margin-left: 0;
+    margin-right: 0;
     margin-bottom: 0;
+    max-width: 100%;
   }
   .fil-ariane {
     margin-top: 0;

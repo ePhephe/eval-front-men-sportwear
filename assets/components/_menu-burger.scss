@@ -1,8 +1,8 @@
 /* Menu Burger masqué normalement */
 .menu-burger {
     display: none;
-    /* Affichage en mode smartphone */
-    @media all and (max-width : $widthMinDesktop) {
+    /* Affichage en mode medium/large */
+    @media all and (max-width : $maxWidthMedium) {
         width:36px;
         height:36px;
         display: flex;
@@ -11,8 +11,8 @@
         align-content: space-around;
         padding: 5px;
         position: fixed;
-        top: 17px;
-        right: 46px;
+        top: 16px;
+        right: 16px;
         z-index: 11;
 
         &>span {
@@ -25,7 +25,7 @@
 }
 /* Croix du menu Burger masqué normalement */
 .menu-burger-close {
-    @media all and (max-width : $widthMinDesktop) {
+    @media all and (max-width : $maxWidthMedium) {
         &>span {
             position: absolute;
             transition: transform 400ms linear;
@@ -45,11 +45,11 @@
         }
     }
 }
-/* Menu Burger masqué normalement */
+/* Navigation Menu Burger masqué normalement */
 .navigation-burger {
     display: none;
     /* Affichage en mode smartphone */
-    @media all and (max-width : $widthMinDesktop) {
+    @media all and (max-width : $maxWidthMedium) {
         width:100%;
         height: 100vh;
         background-color: var(--firstColor);
@@ -66,13 +66,12 @@
 
 /* Transformation pour l'affichage du header en smartphone */
 .navigation-burger-affiche {
-    @media all and (max-width : $widthMinDesktop) {
+    @media all and (max-width : $maxWidthMedium) {
         transform: translateX(0%);
     }
 }
-
 .navigation-classique {
-    @media all and (max-width : $widthMinDesktop) {
+    @media all and (max-width : $maxWidthMedium) {
         display: none;
     }
 }

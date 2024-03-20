@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Référencement - Titre et meta description de la page -->
     <title>Libellé du produit</title>
-    <meta name="description" content="">
+    <meta name="description" content="Découvrez les Libelle produit pour hommes, parfaites pour votre style sportif et urbain. Achetez dès maintenant ! - Livraison offerte* - Retour gratuit">
+    <link rel="canonical" href="https://www.mens-sportwear.fr/libelle-produit/">
     <!-- Fichiers style des librairies utilisées si nécessaire -->
-    <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="./public/js/library/leaflet/leaflet.css">
     <link rel="stylesheet" href="./public/js/library/aos-master/dist/aos.css">
-    <link rel="stylesheet" href="./public/js/library/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./public/js/library/swiper/swiper-bundle.min.css">
     <!-- Style CSS global -->
     <link rel="stylesheet" href="./public/css/style.css">
     <!-- Mise en place du favicon -->
@@ -39,8 +40,8 @@
             </nav>
             <!-- Accès au panier et au compte, masqué en responsive -->
             <div class="flex align-center gap navigation-classique">
-                <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
-                <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+                <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/icon-header-panier.png" alt="Icône du panier"></a>
+                <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/icon-header-account.png" alt="Icône de mon compte"></a>
             </div>
             <div class="menu-burger" id="menuBurger">
                 <span class="burger-top"></span>
@@ -58,8 +59,8 @@
                     </ul>
                 </nav>
                 <div class="flex gap">
-                    <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/header-pannier.png" alt="Icône du panier"></a>
-                    <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/header-account.png" alt="Icône de mon compte"></a>
+                    <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/icon-header-panier.png" alt="Icône du panier"></a>
+                    <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/icon-header-account.png" alt="Icône de mon compte"></a>
                 </div>
             </div>
         </div>
@@ -68,16 +69,16 @@
     <div class="vide-header">
     </div>
     <!-- Main pour le contenu de la page -->
-    <main class="container-full">
+    <main itemscope itemtype="http://schema.org/Product" class="container-full">
         <div class="fil-ariane margin-top-30px margin-bottom-30px flex direction-column-responsive">
             <div class="categorie">
-                <a href="" title="Accès à la catégorie des chaussures">Chaussures</a> >
+                <a href="./liste-categories.html?rub=chaussures" title="Accès à la catégorie des chaussures">Chaussures</a> >
             </div>
             <div class="sous-categorie">
-                <a href="./liste-produits.html" title="Accès à la catégorie des baskets">Baskets</a> >
+                <a href="./liste-produits.html?cat=baskets" title="Accès à la catégorie des baskets">Baskets</a> >
             </div>
             <div class="produit">
-                Libelle du produit
+                <a itemprop="url" href="./detail-produit.html?id-produit=23123132" title="Accès à la page du produit Libelle du produit">Libelle du produit</a>
             </div>
         </div>
         <section class="detail-produit large-12-12 flex justify-between margin-bottom-100px container-marges-smartphone container-marges-tablet">
@@ -85,52 +86,54 @@
                 <div class="swiper mySwiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-bleu.png" alt="Photo de la basket en bleu">
+                            <img itemprop="image" class="responsive" src="./public/images/details-produit/libelle-basket-bleu.png" alt="Photo de la basket en bleu">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-violet.png" alt="Photo de la basket en violet">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en violet">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-rouge.png" alt="Photo de la basket en rouge">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-rouge.png" alt="Photo de la basket en rouge">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-vert.png" alt="Photo de la basket en vert">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en vert">
                         </div>
                     </div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
-                <div class="swiper mySwiper" thumbsSlider="">
+                <div class="swiper mySwiper" >
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-bleu.png" alt="Photo de la basket en bleu">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-bleu.png" alt="Photo de la basket en bleu">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-violet.png" alt="Photo de la basket en violet">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-violet.png" alt="Photo de la basket en violet">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-rouge.png" alt="Photo de la basket en rouge">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-rouge.png" alt="Photo de la basket en rouge">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/basket2-vert.png" alt="Photo de la basket en vert">
+                            <img class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en vert">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="description-produit large-6-12 medium-8-8 small-4-4 flex direction-column gap">
                 <div class="flex justify-between">
-                    <h1 class="large-9-12">Libellé du produit</h1>
-                    <span class="prix">149 €</span>
+                    <h1 itemprop="name" class="large-9-12">Libellé du produit</h1>
+                    <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                        <span itemprop="price" class="prix">149 €</span>
+                    </span>
                 </div>
-                <p>
-                    Dernière née de la gamme, cette basket est conçue pour la course
-                    a pied sur bitume comme sur les chemins légèrement escarpés.
-                <ul>
-                    <li>semelle : caoutchouc naturel anti dérapant</li>
-                    <li>bon maintien tu pied</li>
-                    <li>Aération optimale grâce a la structure micro alvéolée de sa coque</li>
-                </ul>
-                </p>
+                <div itemprop="description">
+                    <p>Dernière née de la gamme, cette basket est conçue pour la course
+                    a pied sur bitume comme sur les chemins légèrement escarpés.</p>
+                    <ul>
+                        <li>semelle : caoutchouc naturel anti dérapant</li>
+                        <li>bon maintien tu pied</li>
+                        <li>Aération optimale grâce a la structure micro alvéolée de sa coque</li>
+                    </ul>
+                </div>
                 <div class="flex justify-between gap">
                     <span >Couleurs disponibles</span>
                     <div class="small-4-4 flex gap" id="choix-couleur">
@@ -160,9 +163,26 @@
         <!-- Section pour les avis client -->
         <section class="margin-bottom-100px flex gap container-marges-smartphone container-marges-tablet">
             <h2 class="margin-bottom-30px">Avis des consommateurs</h2>
-            <article class="flex align-center">
+            <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="flex align-center">
                 <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
-                    <img src="./public/images/images-site/header-account.png" alt="Icône représentant un avis utilisateur">
+                    <img src="./public/images/images-site/icon-header-account.png" alt="Icône représentant un avis utilisateur">
+                </div>
+                <div class="large-8-12 flex direction-column gap">
+                    <div class="flex gap">
+                        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                            <span itemprop="name" class="nom-avis">Nicolas</span>
+                        </span>
+                        <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                            <span itemprop="ratingValue">★★★★☆</span>
+                        </span>
+                    </div>
+                    <p itemprop="reviewBody">Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
+                        et faciles a porter, je recommande grandement ce produit</p>
+                </div>
+            </div>
+            <div class="flex align-center">
+                <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
+                    <img src="./public/images/images-site/icon-header-account.png" alt="Icône représentant un avis utilisateur">
                 </div>
                 <div class="large-8-12 flex direction-column gap">
                     <div class="flex gap">
@@ -172,10 +192,10 @@
                     <p>Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
                         et faciles a porter, je recommande grandement ce produit</p>
                 </div>
-            </article>
-            <article class="flex align-center">
+            </div>
+            <div class="flex align-center">
                 <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
-                    <img src="./public/images/images-site/header-account.png" alt="Icône représentant un avis utilisateur">
+                    <img src="./public/images/images-site/icon-header-account.png" alt="Icône représentant un avis utilisateur">
                 </div>
                 <div class="large-8-12 flex direction-column gap">
                     <div class="flex gap">
@@ -185,23 +205,7 @@
                     <p>Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
                         et faciles a porter, je recommande grandement ce produit</p>
                 </div>
-            </article>
-            <article class="flex align-center">
-                <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
-                    <img src="./public/images/images-site/header-account.png" alt="Icône représentant un avis utilisateur">
-                </div>
-                <div class="large-8-12 flex direction-column gap">
-                    <div class="flex gap">
-                        <span class="nom-avis">Nicolas</span>
-                        <span>★★★★☆</span>
-                    </div>
-                    <p>Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
-                        et faciles a porter, je recommande grandement ce produit</p>
-                </div>
-            </article>
-            <article></article>
-            <article></article>
-
+            </div>
         </section>
     </main>
     <!-- Footer avec la carte et les différentes colonnes (Nav, Horaires et Nav des réseaux) -->
@@ -241,16 +245,16 @@
                 <nav>
                     <ul class="flex gap">
                         <li>
-                            <a href="" title="Accès à notre compte X"><img src="./public/images/images-site/TwitterX.png" alt="Logo de X"></a>
+                            <a href="" title="Accès à notre compte X"><img src="./public/images/images-site/logo-x.png" alt="Logo de X"></a>
                         </li>
                         <li>
-                            <a href="" title="Accès à notre compte Facebook"><img src="./public/images/images-site/Facebook.png" alt="Logo de Facebook"></a>
+                            <a href="" title="Accès à notre compte Facebook"><img src="./public/images/images-site/logo-facebook.png" alt="Logo de Facebook"></a>
                         </li>
                         <li>
-                            <a href="" title="Accès à notre compte Tiktok"><img src="./public/images/images-site/TikTok.png" alt="Logo de Tiktok"></a>
+                            <a href="" title="Accès à notre compte Tiktok"><img src="./public/images/images-site/logo-tiktok.png" alt="Logo de Tiktok"></a>
                         </li>
                         <li>
-                            <a href="" title="Accès à notre compte Instagram"><img src="./public/images/images-site/Instagram.png" alt="Logo de Instagram"></a>
+                            <a href="" title="Accès à notre compte Instagram"><img src="./public/images/images-site/logo-instagram.png" alt="Logo de Instagram"></a>
                         </li>
                     </ul>
                 </nav>
