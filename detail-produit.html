@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Référencement - Titre et meta description de la page -->
-    <title>Libellé du produit</title>
+    <title>Libellé du produit chez M'S</title>
     <meta name="description" content="Découvrez les Libelle produit pour hommes, parfaites pour votre style sportif et urbain. Achetez dès maintenant ! - Livraison offerte* - Retour gratuit">
     <link rel="canonical" href="https://www.mens-sportwear.fr/libelle-produit/">
     <!-- Fichiers style des librairies utilisées si nécessaire -->
@@ -69,23 +69,27 @@
     <div class="vide-header">
     </div>
     <!-- Main pour le contenu de la page -->
-    <main itemscope itemtype="http://schema.org/Product" class="container-full">
-        <div class="fil-ariane margin-top-30px margin-bottom-30px flex direction-column-responsive">
-            <div class="categorie">
+    <!-- Mise en place du schema.org -->
+    <main itemscope itemtype="http://schema.org/Product">
+        <!-- Affichage du fil d'ariane -->
+        <div class="fil-ariane container-full small-4-4 margin-top-30px margin-bottom-30px flex">
+            <div class="categorie medium-2-8">
                 <a href="./liste-categories.html?rub=chaussures" title="Accès à la catégorie des chaussures">Chaussures</a> >
             </div>
-            <div class="sous-categorie">
+            <div class="sous-categorie medium-2-8">
                 <a href="./liste-produits.html?cat=baskets" title="Accès à la catégorie des baskets">Baskets</a> >
             </div>
-            <div class="produit">
+            <div class="produit medium-4-8">
                 <a itemprop="url" href="./detail-produit.html?id-produit=23123132" title="Accès à la page du produit Libelle du produit">Libelle du produit</a>
             </div>
         </div>
-        <section class="detail-produit large-12-12 flex justify-between margin-bottom-100px container-marges-smartphone container-marges-tablet">
+        <section class="detail-produit large-12-12 flex justify-between margin-bottom-100px container-full container-marges-smartphone container-marges-tablet">
             <div class="large-5-12 small-4-4 medium-8-8">
+                <!-- Mise en place du slider pour faire défiler les images du produit -->
                 <div class="swiper mySwiper2">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                            <!-- On définit une image pour schema.org -->
                             <img itemprop="image" class="responsive" src="./public/images/details-produit/libelle-basket-bleu.png" alt="Photo de la basket en bleu">
                         </div>
                         <div class="swiper-slide">
@@ -98,9 +102,11 @@
                             <img class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en vert">
                         </div>
                     </div>
+                    <!-- Mise en place des boutons de navigation du slider -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
                 </div>
+                <!-- Mise en place des aperçus en lien avec le slider -->
                 <div class="swiper mySwiper" >
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -118,13 +124,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Description du produit -->
             <div class="description-produit large-6-12 medium-8-8 small-4-4 flex direction-column gap">
                 <div class="flex justify-between">
+                    <!-- Titre et déclation du nom pour schema.org -->
                     <h1 itemprop="name" class="large-9-12">Libellé du produit</h1>
+                    <!-- Définition de l'offre proposé avec mise en avant du prix pour schema.org -->
                     <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                         <span itemprop="price" class="prix">149 €</span>
                     </span>
                 </div>
+                <!-- Déclaration de la description du produit pour schema.org -->
                 <div itemprop="description">
                     <p>Dernière née de la gamme, cette basket est conçue pour la course
                     a pied sur bitume comme sur les chemins légèrement escarpés.</p>
@@ -135,6 +145,7 @@
                     </ul>
                 </div>
                 <div class="flex justify-between gap">
+                    <!-- Choix des couleurs -->
                     <span >Couleurs disponibles</span>
                     <div class="small-4-4 flex gap" id="choix-couleur">
                         <a href="" title="Choisir la couleur bleu"><div class="pastille-couleur couleur-bleu"></div></a>
@@ -144,6 +155,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between gap">
+                    <!-- Choix de la taille -->
                     <label for="tailles" class="large-4-12 small-4-4">Tailles disponibles</label>
                     <select class="large-6-12 small-4-4" name="tailles" id="tailles">
                         <option value="">Sélectionnez votre taille</option>
@@ -154,6 +166,7 @@
                     </select>
                 </div>
                 <div class="flex justify-between">
+                    <!-- Indication du stock -->
                     <span>Nombre d'articles en stock</span>
                     <div>67</div>
                 </div>
@@ -161,21 +174,25 @@
             </div>
         </section>
         <!-- Section pour les avis client -->
-        <section class="margin-bottom-100px flex gap container-marges-smartphone container-marges-tablet">
+        <section class="container-full margin-bottom-100px flex gap container-marges-smartphone container-marges-tablet">
             <h2 class="margin-bottom-30px">Avis des consommateurs</h2>
+            <!-- On définit l'item avis pour schema.org -->
             <div itemprop="review" itemscope itemtype="http://schema.org/Review" class="flex align-center">
                 <div class="image-avis large-1-12 flex align-center justify-center  margin-right-30px">
                     <img src="./public/images/images-site/icon-header-account.png" alt="Icône représentant un avis utilisateur">
                 </div>
                 <div class="large-8-12 flex direction-column gap">
                     <div class="flex gap">
+                        <!-- On indique le nom de l'auteur de l'avis pour schema.org -->
                         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                             <span itemprop="name" class="nom-avis">Nicolas</span>
                         </span>
+                        <!-- On indique la note donnée pour schema.org -->
                         <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                             <span itemprop="ratingValue">★★★★☆</span>
                         </span>
                     </div>
+                    <!-- On indique le contenu de l'avis pour schema.org -->
                     <p itemprop="reviewBody">Ces baskets sont super, je les prends pour courrir ou même en ville pour sortir car elles sont sympa en plus
                         et faciles a porter, je recommande grandement ce produit</p>
                 </div>
@@ -262,6 +279,11 @@
         </div>
         <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
             <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
+        </div>
+        <div class="switch large-12-12 flex justify-center align-center margin-top-30px">
+            <p>Police accessible :</p>
+            <input type="checkbox" id="switchPolice">
+            <label for="switchPolice">Police</label> 
         </div>
     </footer>
     

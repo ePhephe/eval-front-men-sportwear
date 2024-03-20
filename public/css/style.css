@@ -80,6 +80,10 @@ th {
   font-family: "Roboto";
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "OpenDys";
+  src: url("../fonts/OpenDyslexic/OpenDyslexic-Regular.otf");
+}
 :root {
   /* TYPOGRAPHIE */
   --fontTitre: "ArchivoBlack";
@@ -681,6 +685,50 @@ th {
   }
 }
 
+/* Style des boutons switch */
+/* Div classe switch avec un p pour le libellé et input+label checkbox pour le champ */
+.switch p {
+  margin-right: var(--gouttiere);
+}
+.switch input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+.switch input + label {
+  background: var(--firstColor);
+  border: 1px solid var(--fourthColor);
+}
+.switch input:checked + label:after {
+  left: calc(100% - 3px);
+  transform: translateX(-100%);
+}
+.switch label {
+  text-indent: -9999px;
+  width: 50px;
+  height: 28px;
+  background: grey;
+  display: inline-block;
+  border-radius: 100px;
+  position: relative;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.switch label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--fourthColor);
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.switch label:active:after {
+  width: 40px;
+}
+
 /********** Règles Générales ***********/
 h1, h2, h3, h4 {
   font-family: var(--fontTitre);
@@ -697,6 +745,11 @@ h2 {
 body {
   font-family: var(--fontTexte);
   background-color: var(--fourthColor);
+}
+body.accessible-theme {
+  font-family: "OpenDys";
+  --fontTexte: "OpenDys";
+  --fontTitre: "OpenDys";
 }
 
 a {
@@ -728,6 +781,10 @@ a {
   color: var(--fourthColor);
   font-weight: 700;
   cursor: pointer;
+  transition: background-color 200ms linear;
+}
+.button-cta:hover {
+  background-color: var(--fifthColor);
 }
 
 .button {
@@ -735,8 +792,13 @@ a {
   text-align: center;
   font-weight: 700;
   border: 2px solid var(--firstColor);
+  transition: color 200ms linear, border 200ms linear;
   padding: 12px 0;
   cursor: pointer;
+}
+.button:hover {
+  border: 2px solid var(--fifthColor);
+  color: var(--fifthColor);
 }
 
 .padding-button {
@@ -770,8 +832,15 @@ header {
   left: 0;
   z-index: 10;
 }
+header nav li {
+  transition: font-weight 200ms linear, border 200ms linear, color 200ms linear;
+}
 header nav li.en-avant {
   border: 1px solid var(--fourthColor);
+}
+header nav li.en-avant:hover {
+  color: var(--fifthColor);
+  border: 2px solid var(--fifthColor);
 }
 header nav li:hover {
   font-weight: 700;
@@ -812,6 +881,26 @@ header nav li:hover {
 .fil-ariane .produit {
   background-color: var(--secondColor);
   color: var(--fourthColor);
+}
+@media all and (max-width: 800px) {
+  .fil-ariane {
+    margin-top: 0;
+  }
+  .fil-ariane > * {
+    width: 33.33%;
+  }
+}
+@media all and (max-width: 500px) {
+  .fil-ariane {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column;
+    max-width: 100%;
+  }
+  .fil-ariane > * {
+    width: 100%;
+  }
 }
 
 /********** Règles sur la page d'accueil ***********
@@ -887,7 +976,7 @@ header nav li:hover {
 }
 
 .article-outdoor {
-  margin-top: -220px;
+  margin-top: -180px;
 }
 .article-outdoor article {
   border: 1px solid var(--firstColor);
@@ -907,9 +996,17 @@ header nav li:hover {
   text-align: center;
 }
 @media all and (max-width: 1080px) {
+  .article-outdoor article {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media all and (max-width: 1080px) {
   .article-outdoor {
     margin-top: 0;
     margin-left: 0;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -985,6 +1082,12 @@ header nav li:hover {
   padding: 8px;
 }
 
+#aucunResultat {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
 /* Mise en forme de la liste des produits */
 .liste-produits article {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.33);
@@ -1058,9 +1161,6 @@ header nav li:hover {
     margin-right: 0;
     margin-bottom: 0;
     max-width: 100%;
-  }
-  .fil-ariane {
-    margin-top: 0;
   }
   .description-produit {
     margin-top: 50px;

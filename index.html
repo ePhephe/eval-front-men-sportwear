@@ -42,11 +42,13 @@
                 <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/icon-header-panier.png" alt="Icône du panier"></a>
                 <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/icon-header-account.png" alt="Icône de mon compte"></a>
             </div>
+            <!-- Menu burger qui s'affiche sur les supports small et medium -->
             <div class="menu-burger" id="menuBurger">
                 <span class="burger-top"></span>
                 <span class="burger-middle"></span>
                 <span class="burger-bottom"></span>
             </div>
+            <!-- Navigation spécifique au menu burger -->
             <div class="navigation-burger flex direction-column align-center" id="navigationBurger">
                 <nav class="flex align-center margin-top-50px margin-bottom-30px">
                     <ul class="flex align-center direction-column gap">
@@ -81,6 +83,7 @@
         <!-- Section pour afficher les catégories -->
         <section class="categories container-full container-marges-smartphone container-marges-tablet margin-top-50px margin-bottom-100px flex justify-between gap">
             <h2 class="large-12-12 margin-bottom-20px">Nos produits par catégorie</h2>
+            <!-- Pour chaque catégorie on a un article -->
             <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
                 <div class="flex">
                     <h3 class="large-12-12">Chaussures</h3>
@@ -151,7 +154,7 @@
                 </div>
             </div>
         </section>
-        <div data-aos="fade-up" class="article-outdoor margin-left-100px margin-bottom-60px">
+        <div data-aos="fade-up" class="article-outdoor container-full margin-bottom-60px">
             <!-- Mise en avant d'un produit de la gamme outdoor -->
             <article class="bg-black large-7-12 small-4-4 medium-8-8 flex justify-between">
                 <!-- Image du produit -->
@@ -337,8 +340,15 @@
                 </nav>
             </div>
         </div>
+        <!-- Mentions légales -->
         <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
             <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
+        </div>
+        <!-- Mise en place d'un switch pour afficher un police accessible aux personnes dyslexiques -->
+        <div class="switch large-12-12 flex justify-center align-center margin-top-30px">
+            <p>Police accessible :</p>
+            <input type="checkbox" id="switchPolice">
+            <label for="switchPolice">Police</label> 
         </div>
     </footer>
     

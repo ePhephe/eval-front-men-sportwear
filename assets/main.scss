@@ -5,6 +5,7 @@
 @import "./components/_layout.scss";
 @import "./components/_flexbox.scss";
 @import "./components/_menu-burger.scss";
+@import "./components/_switch.scss";
 
 /********** Règles Générales ***********/
 h1,h2,h3,h4 {
@@ -19,6 +20,11 @@ h2 {
 body {
     font-family: var(--fontTexte);
     background-color: var(--fourthColor);
+    &.accessible-theme {
+        font-family: 'OpenDys';
+        --fontTexte: 'OpenDys';
+        --fontTitre: 'OpenDys';
+    }
 }
 a {
     color: inherit;
@@ -45,14 +51,23 @@ a {
     color: var(--fourthColor);
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 200ms linear;
+    &:hover{
+        background-color: var(--fifthColor);
+    }
 }
 .button {
     color: var(--firstColor);
     text-align: center;
     font-weight: 700;
     border: 2px solid var(--firstColor);
+    transition: color 200ms linear, border 200ms linear;
     padding: 12px 0;
     cursor: pointer;
+    &:hover{
+        border: 2px solid var(--fifthColor);
+        color: var(--fifthColor);
+    }
 }
 .padding-button {
     padding: var(--paddingButton);
@@ -81,8 +96,15 @@ header {
     left: 0;
     z-index: 10;
     nav {
+        li {
+            transition: font-weight 200ms linear, border 200ms linear, color 200ms linear;
+        }
         li.en-avant {
             border: 1px solid var(--fourthColor);
+        }
+        li.en-avant:hover {
+            color: var(--fifthColor);
+            border: 2px solid var(--fifthColor);
         }
         li:hover {
             font-weight: 700;
@@ -123,6 +145,23 @@ header {
     .produit {
         background-color: var(--secondColor);
         color: var(--fourthColor); 
+    }
+
+    @media all and (max-width : $widthContainer800) {
+        margin-top: 0;
+        &>* {
+            width: 33.33%;
+        }
+    }
+    @media all and (max-width : $maxWidthSmall) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column;
+        max-width: 100%;
+        &>* {
+            width: 100%;
+        }
     }
 }
 
@@ -192,7 +231,7 @@ header {
     }
 }
 .article-outdoor {
-    margin-top: -220px;
+    margin-top: -180px;
     article {
         border: 1px solid var(--firstColor);
 
@@ -212,10 +251,16 @@ header {
             font-weight: 700;
             text-align: center;
         }
+        @media all and (max-width : $maxWidthMedium) {
+            width: 100%;
+            max-width: 100%;
+        }
     }
     @media all and (max-width : $maxWidthMedium) {
         margin-top: 0;
         margin-left: 0;
+        width: 100%;
+        max-width: 100%;
     }
 }
 .prix {
@@ -291,6 +336,11 @@ header {
         padding: 8px;
      }
 }
+#aucunResultat {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 
 /* Mise en forme de la liste des produits */
 .liste-produits {
@@ -360,9 +410,6 @@ header {
         margin-right: 0;
         margin-bottom: 0;
         max-width: 100%;
-    }
-    .fil-ariane {
-        margin-top: 0;
     }
     .description-produit {
         margin-top: 50px;

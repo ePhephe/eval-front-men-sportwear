@@ -1,3 +1,5 @@
+//Fonctions accessibles sur l'ensemble du site
+
 //Utilisattion de Leaflet pour l'affichage de la carte
 //On détermine le point central de la map (Ici, Saint-Etienne long 45.439 lat 4.387)
 let map = L.map('map').setView([45.439, 4.387], 12);
@@ -39,6 +41,28 @@ divMenuBurger.addEventListener(`click`,(e)=>{
     divMenuBurger.classList.toggle(`menu-burger-close`);
     divNavBurger.classList.toggle(`navigation-burger-affiche`);    
 });
+
+//On récupère l'élément pour la police accessible
+let inputPolice = document.getElementById(`switchPolice`);
+//Listener sur le bouton pour la slide en haut
+inputPolice.addEventListener(`change`,(e)=>{
+    setPolice(e.target.checked);
+});
+
+/**
+ * Applique la bonne police selon le choix de l'utilsateur
+ * @param {booléen} police - True si la police accessible est choisie, false sinon.
+ */
+function setPolice(police){
+    let body = document.querySelector(`body`);
+
+    if(police===true) {
+        body.classList.add(`accessible-theme`);
+    }
+    else {
+        body.classList.remove(`accessible-theme`);
+    }
+}
 
 //On place ici les fonctions réutilisées dans plusieurs pages
 /**

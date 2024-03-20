@@ -128,6 +128,7 @@ function triProduit(tabProduits) {
  */
 function afficheProduits(tabProduits) {
     //On initialise le template et la div produit
+    let divResultat = document.getElementById(`aucunResultat`);
     let templateHTML = ``;
     divProduits.innerHTML = ``
 
@@ -135,26 +136,33 @@ function afficheProduits(tabProduits) {
     tabProduits = filtreProduit(tabProduits);
     tabProduits = triProduit(tabProduits);
 
-    //On parcourt tous nos produits pour les mettre en forme
-    tabProduits.forEach(unProduit => {
-        templateHTML += `<article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 padding-20px">
-            <a class="flex direction-column gap" href="./detail-produit.html?id-produit=365896" title="Accès à la page produit de la ${unProduit.nom}">
-                <div class="large-12-12">
-                    <img class="responsive" src="./public/images/images-produits/${unProduit.photo}" alt="Photos de la paire de basket ${unProduit.nom}">
-                </div>
-                <div class="flex justify-between">
-                    <h3 class="large-7-12">${unProduit.nom}</h3>
-                    <span class="prix large-5-12">${unProduit.prix} €</span>
-                </div>
-                <p>
-                ${unProduit.description}
-                </p>
-            </a>
-        </article>`;
-    });
+    //Affichage d'un message qu'aucun résultat n'a été trouvé s'il n'y a pas d'élément dans le tableau
+    if(tabProduits.length===0) {
+        divResultat.classList.remove(`d-none`);
+    }
+    else {
+        //On parcourt tous nos produits pour les mettre en forme
+        tabProduits.forEach(unProduit => {
+            templateHTML += `<article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 padding-20px">
+                <a class="flex direction-column gap" href="./detail-produit.html?id-produit=365896" title="Accès à la page produit de la ${unProduit.nom}">
+                    <div class="large-12-12">
+                        <img class="responsive" src="./public/images/images-produits/${unProduit.photo}" alt="Photos de la paire de basket ${unProduit.nom}">
+                    </div>
+                    <div class="flex justify-between">
+                        <h3 class="large-7-12">${unProduit.nom}</h3>
+                        <span class="prix large-5-12">${unProduit.prix} €</span>
+                    </div>
+                    <p>
+                    ${unProduit.description}
+                    </p>
+                </a>
+            </article>`;
+        });
 
-    //On applique le template à l'élément HTML
-    divProduits.innerHTML = templateHTML;
+        //On applique le template à l'élément HTML
+        divProduits.innerHTML = templateHTML;
+        divResultat.classList.add(`d-none`);
+    }
 }
 
 /**

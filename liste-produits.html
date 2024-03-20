@@ -67,17 +67,19 @@
     <!-- On compense la position fixe du header -->
     <div class="vide-header">
     </div>
-    <div class="fil-ariane container-full margin-top-30px margin-bottom-30px flex direction-column-responsive">
-        <div class="categorie">
+    <!-- Affichage du fil d'ariane -->
+    <div class="fil-ariane container-full small-4-4 margin-top-30px margin-bottom-30px flex">
+        <div class="categorie medium-2-8">
             <a href="./liste-categories.html?rub=chaussures" title="Accès à la catégorie des chaussures">Chaussures</a> >
         </div>
-        <div class="sous-categorie">
+        <div class="sous-categorie  medium-2-8">
             <a href="./liste-produits.html?cat=baskets" title="Accès à la catégorie des baskets">Baskets</a> >
         </div>
     </div>
     <!-- Main pour le contenu de la page -->
     <main class="container-full container-marges-smartphone container-marges-tablet">
         <h1>Toutes nos baskets pour homme - Destinées aux sportifs </h1>
+        <!-- Formulaire pour filtrer les éléments -->
         <form action="index.html" method="post" id="filtre-produit" class="large-12-12 flex gap justify-between margin-top-30px direction-column-responsive">
             <div class="large-7-12 medium-8-8 small-4-4">
                 <label for="search">Recherchez un produit :</label>
@@ -103,6 +105,10 @@
                 </select>
             </div>
         </form>
+        <!-- S'il n'y a pas de résultat, on affiche un message -->
+        <div class="large-12-12 flex align-center justify-center margin-top-50px" id="aucunResultat">
+            Aucun résultat ne correspond à votre recherche
+        </div>
         <div class="liste-produits flex gap margin-top-30px margin-bottom-100px" id="listeProduits">
             <!-- Template 
             <article class="large-3-12 small-4-4 medium-4-8 flex direction-column gap padding-20px">
@@ -174,6 +180,11 @@
         </div>
         <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
             <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
+        </div>
+        <div class="switch large-12-12 flex justify-center align-center margin-top-30px">
+            <p>Police accessible :</p>
+            <input type="checkbox" id="switchPolice">
+            <label for="switchPolice">Police</label> 
         </div>
     </footer>
     

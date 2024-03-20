@@ -67,15 +67,18 @@
     <!-- On compense la position fixe du header -->
     <div class="vide-header">
     </div>
-    <div class="fil-ariane container-full margin-top-30px margin-bottom-30px flex direction-column-responsive">
+    <!-- Affichage du fil d'ariane -->
+    <div class="fil-ariane container-full small-4-4 margin-top-30px margin-bottom-30px flex">
         <div class="categorie">
             <a href="./liste-categories.html?rub=chaussures" title="Accès à la catégorie des chaussures">Chaussures</a> >
         </div>
     </div>
     <!-- Main pour le contenu de la page -->
-    <main class="container-full container-marges-smartphone container-marges-tablet">
+    <main class="container-full ">
+        <!-- Section pour l'affichage des catégories -->
         <section class="categories container-full container-marges-smartphone container-marges-tablet margin-top-50px margin-bottom-100px flex justify-between gap">
             <h1 class="large-12-12 margin-bottom-30px">Toutes nos chaussures pour homme - Destinés aux sportifs </h1>
+            <!-- Un article par catégorie -->
             <article data-aos="fade-up" class="large-3-12 small-4-4 medium-4-8 flex direction-column gap margin-bottom-60px">
                 <div class="flex">
                     <h3 class="large-12-12">Nos Baskets</h3>
@@ -180,6 +183,11 @@
         </div>
         <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
             <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
+        </div>
+        <div class="switch large-12-12 flex justify-center align-center margin-top-30px">
+            <p>Police accessible :</p>
+            <input type="checkbox" id="switchPolice">
+            <label for="switchPolice">Police</label> 
         </div>
     </footer>
     
