@@ -617,10 +617,7 @@ th {
     justify-content: center;
     align-content: space-around;
     padding: 5px;
-    position: fixed;
-    top: 16px;
-    right: 16px;
-    z-index: 11;
+    position: relative;
   }
   .menu-burger > span {
     width: 30px;
@@ -862,7 +859,7 @@ header {
   padding-top: 7px;
   padding-bottom: 7px;
   height: 80px;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
