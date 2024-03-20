@@ -93,13 +93,13 @@
                             <img itemprop="image" class="responsive" src="./public/images/details-produit/libelle-basket-bleu.png" alt="Photo de la basket en bleu">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en violet">
+                            <img itemprop="image" class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en violet">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/libelle-basket-rouge.png" alt="Photo de la basket en rouge">
+                            <img itemprop="image" class="responsive" src="./public/images/details-produit/libelle-basket-rouge.png" alt="Photo de la basket en rouge">
                         </div>
                         <div class="swiper-slide">
-                            <img class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en vert">
+                            <img itemprop="image" class="responsive" src="./public/images/details-produit/libelle-basket-vert.png" alt="Photo de la basket en vert">
                         </div>
                     </div>
                     <!-- Mise en place des boutons de navigation du slider -->
@@ -131,7 +131,10 @@
                     <h1 itemprop="name" class="large-9-12">Libellé du produit</h1>
                     <!-- Définition de l'offre proposé avec mise en avant du prix pour schema.org -->
                     <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <span itemprop="price" class="prix">149 €</span>
+                        <meta itemprop="priceCurrency" content="EUR" />
+                        <meta itemprop="availability" content="In Stock" />
+                        <meta itemprop="priceValidUntil" content="2024-03-31" />
+                        <span itemprop="price" class="prix" content="149.00">149 €</span>
                     </span>
                 </div>
                 <!-- Déclaration de la description du produit pour schema.org -->
@@ -189,7 +192,9 @@
                         </span>
                         <!-- On indique la note donnée pour schema.org -->
                         <span itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
-                            <span itemprop="ratingValue">★★★★☆</span>
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <span itemprop="ratingValue" content="4">★★★★☆</span>
                         </span>
                     </div>
                     <!-- On indique le contenu de l'avis pour schema.org -->

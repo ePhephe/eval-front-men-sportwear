@@ -856,6 +856,7 @@ header nav li:hover {
 /* Règles sur les bootiques dans le footer */
 #map {
   height: 420px;
+  z-index: 1;
 }
 
 .mentions-legales a {
