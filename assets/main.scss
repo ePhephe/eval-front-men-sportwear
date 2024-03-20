@@ -293,6 +293,11 @@ header {
         width: -moz-fit-content;
         width: fit-content;
         cursor: pointer;
+        outline: none;
+        border: none;
+        &:hover {
+            background-color: var(--fifthColor);
+        }
     }
 }
 /* Affichage d'une modal pour confirmer la réception du message */

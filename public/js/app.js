@@ -23,15 +23,15 @@ let marker = L.marker([45.439, 4.387], {
 //On place un marqueur pour une première boutique
 let markerStore1 = L.marker([45.458, 4.381], {
     icon:msIcon
-}).addTo(map);
+}).addTo(map).bindPopup(`<strong>M'S Store - Saint-Etienne Nord</strong><br>63 avenue Albert Raymond<br>42 320 Saint-Priest-en-Jarez`);
 //On place un marqueru pour une deuxième boutique
 let markerStore2 = L.marker([45.446, 4.421], {
     icon:msIcon
-}).addTo(map);
+}).addTo(map).bindPopup(`<strong>M'S Store Steel - Saint-Etienne Est</strong><br>2 rue Ferrer<br>42 000 Saint-Etienne`);
 //On place un marqueru pour une troisième boutique
 let markerStore3 = L.marker([45.432, 4.323], {
     icon:msIcon
-}).addTo(map);
+}).addTo(map).bindPopup(`<strong>M'S Store - Saint-Etienne Ouest</strong><br>3 boulevard Pierre et Marie Curie<br>42 230 Roche-la-Molière`);
 
 //On récupère les éléments pour le menu burger
 let divMenuBurger = document.getElementById(`menuBurger`);
@@ -43,11 +43,19 @@ divMenuBurger.addEventListener(`click`,(e)=>{
 });
 
 //On récupère l'élément pour la police accessible
-let inputPolice = document.getElementById(`switchPolice`);
+let tabInputPolice = document.querySelectorAll(`.switch-input-police`);
+let divPolice = document.querySelector(`.switch p`);
+let divSwitch = document.querySelector(`.switch`);
 //Listener sur le bouton pour la slide en haut
-inputPolice.addEventListener(`change`,(e)=>{
-    setPolice(e.target.checked);
+tabInputPolice.forEach(inputPolice => {
+        inputPolice.addEventListener(`change`,(e)=>{
+        setPolice(e.target.checked);
+    });
 });
+
+divPolice.addEventListener(`click`,(e)=>{
+    divSwitch.classList.toggle(`ouvert`);
+})
 
 /**
  * Applique la bonne police selon le choix de l'utilsateur

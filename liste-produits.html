@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- Header avec le logo, le menu, les icônes panier+account et le menu burger -->
-    <header class="bg-black large-12-12 container-marges-smartphone">
+    <header class="bg-black large-12-12 container-marges-smartphone container-marges-tablet">
         <div class="container-full flex justify-between">
             <!-- Logo de la marque avec un lien sur l'accueil -->
             <div>
@@ -42,11 +42,13 @@
                 <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/icon-header-panier.png" alt="Icône du panier"></a>
                 <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/icon-header-account.png" alt="Icône de mon compte"></a>
             </div>
+            <!-- Menu burger qui s'affiche sur les supports small et medium -->
             <div class="menu-burger" id="menuBurger">
                 <span class="burger-top"></span>
                 <span class="burger-middle"></span>
                 <span class="burger-bottom"></span>
             </div>
+            <!-- Navigation spécifique au menu burger -->
             <div class="navigation-burger flex direction-column align-center" id="navigationBurger">
                 <nav class="flex align-center margin-top-50px margin-bottom-30px">
                     <ul class="flex align-center direction-column gap">
@@ -60,6 +62,13 @@
                 <div class="flex gap">
                     <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/icon-header-panier.png" alt="Icône du panier"></a>
                     <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/icon-header-account.png" alt="Icône de mon compte"></a>
+                </div>
+                <div class="switch-burger div-input-police flex justify-center direction-column gap justify-center align-center margin-top-30px">
+                    <p>Font OpenDys</p>
+                    <div>
+                        <input type="checkbox" class="switch-input-police" id="switchPoliceBurger">
+                        <label for="switchPoliceBurger">Police</label> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -181,12 +190,15 @@
         <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
             <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
         </div>
-        <div class="switch large-12-12 flex justify-center align-center margin-top-30px">
-            <p>Police accessible :</p>
-            <input type="checkbox" id="switchPolice">
+    </footer>
+    <!-- Mise en place d'un switch pour afficher un police accessible aux personnes dyslexiques -->
+    <div class="switch div-input-police flex justify-center direction-column gap justify-center align-center margin-top-30px">
+        <p>Font OpenDys</p>
+        <div>
+            <input type="checkbox" class="switch-input-police" id="switchPolice">
             <label for="switchPolice">Police</label> 
         </div>
-    </footer>
+    </div>
     
     <!-- Script des biliothèques si nécessaires -->
     <script src="./public/js/library/leaflet/leaflet.js"></script>

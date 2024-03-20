@@ -63,6 +63,13 @@
                     <a href="" title="Accéder à mon panier"><img src="./public/images/images-site/icon-header-panier.png" alt="Icône du panier"></a>
                     <a href="" title="Accéder à mon compte"><img src="./public/images/images-site/icon-header-account.png" alt="Icône de mon compte"></a>
                 </div>
+                <div class="switch-burger div-input-police flex justify-center direction-column gap justify-center align-center margin-top-30px">
+                    <p>Font OpenDys</p>
+                    <div>
+                        <input type="checkbox" class="switch-input-police" id="switchPoliceBurger">
+                        <label for="switchPoliceBurger">Police</label> 
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -344,13 +351,15 @@
         <div class="mentions-legales large-12-12 flex justify-center margin-top-30px">
             <a href="" title="Accès aux mentions légales">Mentions légales</a> du site - Créé par vous...
         </div>
-        <!-- Mise en place d'un switch pour afficher un police accessible aux personnes dyslexiques -->
-        <div class="switch large-12-12 flex justify-center align-center margin-top-30px">
-            <p>Police accessible :</p>
-            <input type="checkbox" id="switchPolice">
+    </footer>
+    <!-- Mise en place d'un switch pour afficher un police accessible aux personnes dyslexiques -->
+    <div class="switch div-input-police flex justify-center direction-column gap justify-center align-center margin-top-30px">
+        <p>Font OpenDys</p>
+        <div>
+            <input type="checkbox" class="switch-input-police" id="switchPolice">
             <label for="switchPolice">Police</label> 
         </div>
-    </footer>
+    </div>
     
     <!-- Script des biliothèques si nécessaires -->
     <script src="./public/js/library/leaflet/leaflet.js"></script>
