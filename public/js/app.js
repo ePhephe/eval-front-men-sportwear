@@ -117,4 +117,7 @@ function enleveErreur(id){
 }
 
 //Lancement de AOS pour les animations au scroll
-AOS.init();
+AOS.init({disable: function() {
+    let maxWidth = 800;
+    return window.innerWidth < maxWidth;
+  }});

@@ -20,6 +20,7 @@ h2 {
 body {
     font-family: var(--fontTexte);
     background-color: var(--fourthColor);
+    overflow-x: hidden;
     &.accessible-theme {
         font-family: 'OpenDys';
         --fontTexte: 'OpenDys';
