@@ -1093,7 +1093,7 @@ header nav li:hover {
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.33);
 }
 .liste-produits article .prix {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 /********** Règles sur la page de détail d'un produit **********/
