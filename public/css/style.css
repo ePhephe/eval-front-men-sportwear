@@ -241,9 +241,23 @@ th {
     max-width: 800px;
   }
 }
+@media all and (max-width: 800px) {
+  .container-full {
+    padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+}
 @media all and (max-width: 500px) {
   .container-full {
     max-width: 350px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media all and (max-width: 350px) {
+  .container-full {
+    padding-left: var(--marginSmartphone);
+    padding-right: var(--marginSmartphone);
   }
 }
 

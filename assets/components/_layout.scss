@@ -81,8 +81,18 @@
   @media all and (max-width : $maxWidthMedium) {
     max-width: $widthContainer800;
   }
+  @media all and (max-width : $widthContainer800) {
+    padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
   @media all and (max-width : $maxWidthSmall) {
     max-width: $widthContainer400;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media all and (max-width : $widthContainer400) {
+    padding-left: var(--marginSmartphone);
+    padding-right: var(--marginSmartphone);
   }
 }
 
