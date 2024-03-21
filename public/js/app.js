@@ -116,8 +116,8 @@ function enleveErreur(id){
     
 }
 
-//Lancement de AOS pour les animations au scroll
+//Lancement de AOS pour les animations au scroll uniquement en desktop
 AOS.init({disable: function() {
-    let maxWidth = 800;
+    let maxWidth = 1080;
     return window.innerWidth < maxWidth;
   }});

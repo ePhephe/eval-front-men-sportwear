@@ -175,7 +175,7 @@ function chargeProduits() {
     }).then(rep => {
         //On appelle notre fonction d'affichage
         afficheProduits(rep);
-        //console.log(rep);
+        console.log(rep);
     }).catch(err => {
         console.log(err);
     });
