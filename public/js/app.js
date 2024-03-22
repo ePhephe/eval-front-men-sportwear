@@ -10,7 +10,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 //On crée un icone marqueur pour les boutiques M'S
 var msIcon = L.icon({
-    iconUrl: '/public/images/images-site/pin-map-ms.png',
+    iconUrl: './public/images/images-site/pin-map-ms.png',
     iconSize:     [32, 64], // size of the icon
     iconAnchor:   [16, 64], // point of the icon which will correspond to marker's location
 });
