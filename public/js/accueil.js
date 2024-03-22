@@ -8,7 +8,6 @@ let inputObjet = document.getElementById(`objet`);
 let inputMessage = document.getElementById(`message`);
 let inputReference = document.getElementById(`reference`);
 
-
 /**
  * Vérifie qu'un champ nom ou prénom est correct
  * @param {object} element - Element à tester
@@ -48,7 +47,6 @@ function verifNomPrenom(element){
 
     return test;
 }
-
 /**
  * Vérifie si un email est valide
  * @param {object} email - Element input d'un e-mail
@@ -80,7 +78,6 @@ function validationEmail(email){
     
     return test;
 }
-
 /**
  * Vérifie si la référence saisie est valide
  * @returns booléen - True la référence est valide, False sinon
@@ -99,7 +96,6 @@ function validationReference() {
 
     return regReference.test(inputReference.value);
 }
-
 /**
  * Vérifie si l'objet est correctement saisie et gère l'affichage de la référence
  * @returns booléen - True la référence est valide, False sinon
@@ -126,7 +122,6 @@ function testObjet() {
 
     return true;
 }
-
 /**
  * Vérifie si le message saisi est valide
  * @returns booléen - True la message est valide, False sinon
@@ -157,7 +152,6 @@ function testMessage() {
 
     return true;
 }
-
 /**
  * Affiche le nombre de caractères saisis par l'utilisateur dans le message
  */

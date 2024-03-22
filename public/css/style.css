@@ -1161,7 +1161,7 @@ header nav li:hover {
 }
 
 .detail-produit h1 {
-  width: 90;
+  width: 80%;
 }
 .detail-produit ul {
   list-style: disc;

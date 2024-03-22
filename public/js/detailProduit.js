@@ -27,7 +27,6 @@ let swiper = new Swiper('.mySwiper2', {
 
 //On récupère nos couleurs
 let tabDivCouleur = document.querySelectorAll(`#choix-couleur div`);
-
 //On ajoute un listener sur chaque couleur pour envoyer à la bonne photo
 tabDivCouleur.forEach((divCouleur, index) => {
     divCouleur.addEventListener(`click`, (e) => {

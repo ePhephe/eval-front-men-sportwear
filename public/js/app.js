@@ -59,7 +59,7 @@ divPolice.addEventListener(`click`,(e)=>{
 
 /**
  * Applique la bonne police selon le choix de l'utilsateur
- * @param {booléen} police - True si la police accessible est choisie, false sinon.
+ * @param {boolean} police - True si la police accessible est choisie, false sinon.
  */
 function setPolice(police){
     let body = document.querySelector(`body`);
@@ -71,7 +71,6 @@ function setPolice(police){
         body.classList.remove(`accessible-theme`);
     }
 }
-
 //On place ici les fonctions réutilisées dans plusieurs pages
 /**
  * Test si du code HTML est présent dans le texte passé en paramètre

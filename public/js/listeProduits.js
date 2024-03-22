@@ -1,6 +1,5 @@
 //On récupère la DIV qui va accueillir les informations
 let divProduits = document.getElementById(`listeProduits`);
-
 //On récupère tous nos inputs qui servent à filtrer la recherche
 let inputSearch = document.getElementById(`search`);
 let inputPrixMini = document.getElementById(`prix-mini`);
@@ -36,7 +35,6 @@ function valideRecherche(texte) {
 
     return hasCode(texte);
 }
-
 /**
  * Vérifie que le prix passé en paramètre est correct
  * @param {float} prix - Prix à tester
@@ -61,7 +59,6 @@ function validePrix(prix, id) {
         return false;
     }
 }
-
 /**
  * Filtre le tableau des produits
  * @param {array} tabProduits - Tableau des produits à trier
@@ -97,7 +94,6 @@ function filtreProduit(tabProduits) {
     //On retourne le tableau filtré
     return newTabProduits;
 }
-
 /**
  * Trie le tableau des produits
  * @param {array} tabProduits - Tableau des produits à trier
@@ -121,7 +117,6 @@ function triProduit(tabProduits) {
 
     return tabProduits;
 }
-
 /**
  * Affiche la liste des produits dans l'élément HTML correspondant
  * @param {*} tabProduits 
@@ -164,7 +159,6 @@ function afficheProduits(tabProduits) {
         divResultat.classList.add(`d-none`);
     }
 }
-
 /**
  * Charge la liste des produits
  */
@@ -175,7 +169,7 @@ function chargeProduits() {
     }).then(rep => {
         //On appelle notre fonction d'affichage
         afficheProduits(rep);
-        console.log(rep);
+        //console.log(rep);
     }).catch(err => {
         console.log(err);
     });

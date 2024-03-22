@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://127.0.0.1:5501/</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>http://127.0.0.1:5500/</loc>
+    <lastmod>2024-03-2022</lastmod>
   </url>
   <url>
-    <loc>http://127.0.0.1:5501/liste-categories.html</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>http://127.0.0.1:5500/liste-categories.html</loc>
+    <lastmod>2024-03-22</lastmod>
   </url>
   <url>
-    <loc>http://127.0.0.1:5501/liste-produits.html</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>http://127.0.0.1:5500/liste-produits.html</loc>
+    <lastmod>2024-03-22</lastmod>
   </url>
   <url>
-    <loc>http://127.0.0.1:5501/detail-produit.html</loc>
-    <lastmod>2024-03-20</lastmod>
+    <loc>http://127.0.0.1:5500/detail-produit.html</loc>
+    <lastmod>2024-03-22</lastmod>
   </url>
 </urlset>
